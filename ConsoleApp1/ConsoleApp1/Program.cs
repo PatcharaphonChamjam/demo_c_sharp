@@ -23,15 +23,15 @@ namespace ConsoleApp1
             VariableAndDataType_3 variableAndData = new VariableAndDataType_3();
             // เรียก Method --การตั้งค่าตัวแปร
             variableAndData.VariableDeclaration();
-            
+
             Console.WriteLine("------------------");
             // เรียก Method --Boolean กำหนดค่าเป็น True
             variableAndData.Boolean();
-            
+
             Console.WriteLine("------------------");
             // เรียก Method --กำหนดค่า Interger
             variableAndData.IntegerNumberType();
-            
+
             Console.WriteLine("------------------");
             //DoubleNumberType
             variableAndData.DoubleNumberType();*/

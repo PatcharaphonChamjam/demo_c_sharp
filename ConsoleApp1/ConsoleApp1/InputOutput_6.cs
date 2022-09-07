@@ -34,6 +34,7 @@ namespace ConsoleApp1
 
         public void Read()
         {
+            Console.WriteLine("Enter : Console.Read() :");
             Console.WriteLine(Console.Read());
         }
 
@@ -43,8 +44,9 @@ namespace ConsoleApp1
             int age;
             double height;
 
-            Console.Write("Enter name :");
+            
             name = Console.ReadLine();
+            
             Console.Write("Enter age :");
             int.TryParse(Console.ReadLine(), out age);
             Console.Write("Enter height :");

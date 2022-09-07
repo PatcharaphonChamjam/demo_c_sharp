@@ -28,7 +28,7 @@ namespace ConsoleApp1
 
         public void ConstantsArray()
         {
-            const int SIZE = 5;
+            const int SIZE = 3;
 
             string[] names = new string[SIZE];
             int[] scores = new int[SIZE];

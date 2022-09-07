@@ -53,9 +53,9 @@ namespace ConsoleApp1
             // เรียก Method --กำหนดค่าของค่าคงที่ (Constants)
             constants.ConstantsDeclaration();
             
-            Console.WriteLine("------------------");
+            //Console.WriteLine("------------------");
             // เรียก Method --กำหนดค่าของค่าคงที่ (Constants) ใน Array
-            constants.ConstantsArray();
+            //constants.ConstantsArray();
             
 
             /*-----------------------------------------------
@@ -63,35 +63,68 @@ namespace ConsoleApp1
             ------------------------------------------------*/
              Console.WriteLine("--------Chapter 5 :: Operators----------");
              //สร้าง obj ใหม่จาก class Operators_5
-             Operators_5 operators = new Operators_5();
+             Operators_5 operators5 = new Operators_5();
             // เรียก Method --ตัวดำเนินการทางคณิตศาสตร (บวก ลบ คูณ หาร)
-            operators.ArithmeticOperators();
+            operators5.ArithmeticOperators();
 
             Console.WriteLine("------------------");
             // เรียก Method --การเปรียบเทียบความสัมพันธ์ แสดงผลเป็น True กับ False
-            operators.RelationComparison();
+            operators5.RelationComparison();
 
             Console.WriteLine("------------------");
             // เรียก Method --การดำเนินการเชิงตรรก 
-            operators.LogicalOperation();
+            operators5.LogicalOperation();
 
             Console.WriteLine("------------------");
              // เรียก Method --การดำเนินการเชิงตรรก เพิ่มเติม
-            operators.LogicalOperation2();
+            operators5.LogicalOperation2();
 
             Console.WriteLine("------------------");
              // เรียก Method --การใช้เงื่อนไข Ternary ถ้าหาก True จะแสดงผล Index 0 ถ้า Flase จะแสดง Index 1
-            operators.TernaryOperator();
+            operators5.TernaryOperator();
            
 
+            /*-----------------------------------------------
+                Chapter 6 :: Input Output
+            ------------------------------------------------*/
+             Console.WriteLine("--------Chapter 6 :: Input Output----------");
+            //สร้าง obj ใหม่จาก class InputOutput_6
+            InputOutput_6 inputOutput = new InputOutput_6();
+            // เรียก Method --การแสดงผลข้อความ แบบไม่่ขึ้นบรรทัดใหม่
+            inputOutput.WriteConsole();
 
-/*            //ตัวอย่าง  If else
-            //สร้าง obj ใหม่จาก class SelectionStatement
+            Console.WriteLine("------------------");
+            // เรียก Method --การแสดงผลข้อความ แบบขึ้นบรรทัดใหม่
+            inputOutput.WriteLine();
+
+            Console.WriteLine("------------------");
+            // เรียก Method --การแสดงผลข้อความ แบบขึ้นบรรทัดใหม่ โดยการอ้างอิงตัวแปร
+            inputOutput.WriteLineVariable();
+
+            Console.WriteLine("------------------");
+            // เรียก Method --การรับค่า Keyboard แบบ int
+            inputOutput.Read();
+
+            Console.WriteLine("------------------");
+            // เรียก Method --การรับค่า Keyboard 
+            inputOutput.ReadLine();
+
+
+            /*-----------------------------------------------
+                Chapter 7 :: If Else and Switch Case
+            ------------------------------------------------*/
+            Console.WriteLine("--------Chapter 7 :: if else and switch case----------");
+           //ตัวอย่าง  If else
+            //สร้าง obj ใหม่จาก class SelectionStatement_7
             SelectionStatement_7 selectionStatement = new SelectionStatement_7();
             //เรียก Method IfElse
             selectionStatement.IfElse();
+
+            Console.WriteLine("------------------");
             //เรียก Method 
             selectionStatement.SwitchCase();
+
+            Console.WriteLine("------------------");
             //get ค่าจาก Props ใส่ตัวแปร
             int myProp = selectionStatement.MyPropertyTest;
             //แสดงค่าจากตัวแปร
@@ -99,10 +132,51 @@ namespace ConsoleApp1
             //set ค่ากลับไปที่ Props
             selectionStatement.MyPropertyTest=100;
             //แสดงค่าจาก Props
-            Console.WriteLine(selectionStatement.MyPropertyTest);*/
+            Console.WriteLine(selectionStatement.MyPropertyTest);
 
-            //Array_9 array_9 = new Array_9();
-            //array_9.JaggedArray();
+
+            /*-----------------------------------------------
+                Chapter 8 :: การวนซ้ำ Loop 
+            ------------------------------------------------*/
+            Console.WriteLine("--------Chapter 8 :: Loop----------");
+            //สร้าง obj ใหม่จาก class ILoop_8nputOutput_6
+            Loop_8 loop = new Loop_8();
+            // เรียก Method --วนลูป While
+            loop.WhileLoop();
+
+            Console.WriteLine("------------------");
+            // เรียก Method --วนลูป DoWhile
+            loop.DoWhile();
+
+            Console.WriteLine("------------------");
+            // เรียก Method --วนลูป For
+            loop.ForLoop();
+
+            Console.WriteLine("------------------");
+            // เรียก Method --วนลูป For เพิ่มเติม
+            loop.ForLoop2();
+
+            Console.WriteLine("------------------");
+            // เรียก Method --วนลูป Foreach
+            loop.ForeachLoop();
+
+            Console.WriteLine("------------------");
+            // เรียก Method --การ Break วนลูป 10 ครั้งแต่ break ที่ 5
+            loop.Break();
+
+            Console.WriteLine("------------------");
+            // เรียก Method --การข้ามการวนซ้ำ ในรอบปัจจุบัน
+            loop.Continue();
+
+
+            /*-----------------------------------------------
+                Chapter 9 :: Array
+            ------------------------------------------------*/
+            Console.WriteLine("--------Chapter 9 :: Array----------");
+            //สร้าง obj ใหม่จาก class Array_9
+            Array_9 array_9 = new Array_9();
+            // เรียก Method --
+            array_9.JaggedArray();
 
             //ทำให้หน้าจอค้างไว้ เมื่อประมวนผลเสร็จ
             Console.ReadKey();

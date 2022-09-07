@@ -46,11 +46,15 @@
     <Compile Include="Array_9.cs" />
     <Compile Include="Class_11.cs" />
     <Compile Include="Constants_4.cs" />
+    <Compile Include="Encapsulation_13.cs" />
+    <Compile Include="Inheritance_14.cs" />
     <Compile Include="InputOutput_6.cs" />
+    <Compile Include="Interfaces_16.cs" />
     <Compile Include="Loop_8.cs" />
     <Compile Include="Method_10.cs" />
     <Compile Include="Objects_12.cs" />
     <Compile Include="Operators_5.cs" />
+    <Compile Include="Polymorphism_15.cs" />
     <Compile Include="SelectionStatement_7.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

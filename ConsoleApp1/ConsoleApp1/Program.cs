@@ -25,7 +25,7 @@ namespace ConsoleApp1
             /*-----------------------------------------------
                 Chapter 3 :: ตัวแปรและประเภทข้อมูล
             ------------------------------------------------*/
-            Console.WriteLine("--------Chapter 3 :: VariableAndDataType----------");
+            /*Console.WriteLine("--------Chapter 3 :: VariableAndDataType----------");
             //สร้าง obj ใหม่จาก class VariableAndDataType_3
             VariableAndDataType_3 variableAndData = new VariableAndDataType_3();
             // เรียก Method --การตั้งค่าตัวแปร
@@ -41,17 +41,17 @@ namespace ConsoleApp1
             
             Console.WriteLine("------------------");
             //DoubleNumberType
-            variableAndData.DoubleNumberType();
+            variableAndData.DoubleNumberType();*/
 
 
              /*-----------------------------------------------
                 Chapter 4 :: ค่าคงที่
             ------------------------------------------------*/
-             Console.WriteLine("--------Chapter 4 :: Constants----------");
+            /* Console.WriteLine("--------Chapter 4 :: Constants----------");
              //สร้าง obj ใหม่จาก class Constants_4
             Constants_4 constants = new Constants_4();
             // เรียก Method --กำหนดค่าของค่าคงที่ (Constants)
-            constants.ConstantsDeclaration();
+            constants.ConstantsDeclaration();*/
             
             //Console.WriteLine("------------------");
             // เรียก Method --กำหนดค่าของค่าคงที่ (Constants) ใน Array
@@ -61,7 +61,7 @@ namespace ConsoleApp1
             /*-----------------------------------------------
                 Chapter 5 :: ตัวดำเนินการ
             ------------------------------------------------*/
-             Console.WriteLine("--------Chapter 5 :: Operators----------");
+             /*Console.WriteLine("--------Chapter 5 :: Operators----------");
              //สร้าง obj ใหม่จาก class Operators_5
              Operators_5 operators5 = new Operators_5();
             // เรียก Method --ตัวดำเนินการทางคณิตศาสตร (บวก ลบ คูณ หาร)
@@ -81,13 +81,13 @@ namespace ConsoleApp1
 
             Console.WriteLine("------------------");
              // เรียก Method --การใช้เงื่อนไข Ternary ถ้าหาก True จะแสดงผล Index 0 ถ้า Flase จะแสดง Index 1
-            operators5.TernaryOperator();
+            operators5.TernaryOperator();*/
            
 
             /*-----------------------------------------------
                 Chapter 6 :: Input Output
             ------------------------------------------------*/
-             Console.WriteLine("--------Chapter 6 :: Input Output----------");
+            /* Console.WriteLine("--------Chapter 6 :: Input Output----------");
             //สร้าง obj ใหม่จาก class InputOutput_6
             InputOutput_6 inputOutput = new InputOutput_6();
             // เรียก Method --การแสดงผลข้อความ แบบไม่่ขึ้นบรรทัดใหม่
@@ -107,13 +107,13 @@ namespace ConsoleApp1
 
             Console.WriteLine("------------------");
             // เรียก Method --การรับค่า Keyboard 
-            inputOutput.ReadLine();
+            inputOutput.ReadLine();*/
 
 
             /*-----------------------------------------------
                 Chapter 7 :: If Else and Switch Case
             ------------------------------------------------*/
-            Console.WriteLine("--------Chapter 7 :: if else and switch case----------");
+            /*Console.WriteLine("--------Chapter 7 :: if else and switch case----------");
            //ตัวอย่าง  If else
             //สร้าง obj ใหม่จาก class SelectionStatement_7
             SelectionStatement_7 selectionStatement = new SelectionStatement_7();
@@ -132,13 +132,13 @@ namespace ConsoleApp1
             //set ค่ากลับไปที่ Props
             selectionStatement.MyPropertyTest=100;
             //แสดงค่าจาก Props
-            Console.WriteLine(selectionStatement.MyPropertyTest);
+            Console.WriteLine(selectionStatement.MyPropertyTest);*/
 
 
             /*-----------------------------------------------
                 Chapter 8 :: การวนซ้ำ Loop 
             ------------------------------------------------*/
-            Console.WriteLine("--------Chapter 8 :: Loop----------");
+            /*Console.WriteLine("--------Chapter 8 :: Loop----------");
             //สร้าง obj ใหม่จาก class ILoop_8nputOutput_6
             Loop_8 loop = new Loop_8();
             // เรียก Method --วนลูป While
@@ -166,13 +166,13 @@ namespace ConsoleApp1
 
             Console.WriteLine("------------------");
             // เรียก Method --การข้ามการวนซ้ำ ในรอบปัจจุบัน
-            loop.Continue();
+            loop.Continue();*/
 
 
             /*-----------------------------------------------
                 Chapter 9 :: Array
             ------------------------------------------------*/
-            Console.WriteLine("--------Chapter 9 :: Array----------");
+            /*Console.WriteLine("--------Chapter 9 :: Array----------");
             //สร้าง obj ใหม่จาก class Array_9
             Array_9 array_9 = new Array_9();
             // เรียก Method --การสร้าง Array 1
@@ -196,13 +196,13 @@ namespace ConsoleApp1
 
             Console.WriteLine("------------------");
             // เรียก Method --การสร้าง JaggedArray เพิ่มเติม
-            array_9.JaggedArray2();
+            array_9.JaggedArray2();*/
 
 
             /*-----------------------------------------------
                 Chapter 10 :: Method
             ------------------------------------------------*/
-            Console.WriteLine("--------Chapter 10 :: Method----------");
+            /*Console.WriteLine("--------Chapter 10 :: Method----------");
             //สร้าง  obj ใหม่จาก class Method_10
             Method_10 method = new Method_10();
             //เรียก Method --การสร้าง Method
@@ -210,14 +210,16 @@ namespace ConsoleApp1
 
             Console.WriteLine("------------------");
             //เรียก Method --การสร้าง Method เพิ่มเติม
-            method.CreatingMethod2();
+            method.CreatingMethod2();*/
 
-           /*-----------------------------------------------
-                Chapter 11 :: Class
-            ------------------------------------------------*/
+
+
+            /*-----------------------------------------------
+                 Chapter 11 :: Class
+             ------------------------------------------------*/
             Console.WriteLine("--------Chapter 11 :: Class----------");
-            //Class_11 class_11 = new Class_11();
-            //class_11.ShowDistance();
+            Class_11 class_11 = new Class_11();
+            class_11.Run();
 
 
             /*-----------------------------------------------

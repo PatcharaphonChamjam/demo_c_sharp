@@ -14,13 +14,16 @@ namespace ConsoleApp1
 
         public void setDimension(int w,int h)
         {
+            //set ค่า Input : width
             width = w;
+            //set ค่า Input : height
             height = h;
 
         }
 
         public int CalculateArea()
         {
+            //เมื่อมีการเรียกใช้ Method จะ Return ค่า width * height
             return width * height;
         }
         

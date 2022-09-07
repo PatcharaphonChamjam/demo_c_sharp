@@ -11,13 +11,20 @@ namespace ConsoleApp1
 
         public void Array1Dimention()
         {
+          
             int[] array1 = new int[5];
+            //กำหนดค่า 2 ใน index ที่ 0 ลงใน Array1
             array1[0] = 2;
+            //กำหนดค่า 43 ใน index ที่ 1 ลงใน Array1
             array1[1] = 43;
+            //กำหนดค่า 54 ใน index ที่ 2 ลงใน Array1
             array1[2] = 54;
 
+            //กำหนดค่า float ลงใน Array2
             float[] array2 = new float[] {1.2f,3.4f,5.0f,8.8f,10.5f};
+            //แสดงค่า array2 ตำแหน่ง index ที่ 0
             Console.WriteLine(array2[0]);
+            //แสดงค่า array2 ตำแหน่ง index ที่ 4
             Console.WriteLine(array2[4]);
         }
 

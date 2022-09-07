@@ -69,6 +69,14 @@ namespace ConsoleApp1
 
             float lightSpeed = 5.8786E12f;
             Console.WriteLine("Light can travel {0} miles in 1 year",lightSpeed);
+
+            double day = 365.25;
+            double neutroMass = 1.674927471E-27;
+            double pi = 22 / 7.0f;
+            Console.WriteLine("Earth take about {0} day to orbit the sun", day);
+            Console.WriteLine("PI value = {0}",pi);
+            Console.WriteLine("Neutron Mass = {0} kg", neutroMass);
+
         }
     }
 }

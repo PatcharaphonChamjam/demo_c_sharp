@@ -80,7 +80,7 @@ namespace ConsoleApp1
             /*-----------------------------------------------
                 Chapter 6 :: Input Output
             ------------------------------------------------*/
-            /* Console.WriteLine("--------Chapter 6 :: Input Output----------");
+            /*Console.WriteLine("--------Chapter 6 :: Input Output----------");
             //สร้าง obj ใหม่จาก class InputOutput_6
             InputOutput_6 inputOutput = new InputOutput_6();
             // เรียก Method --การแสดงผลข้อความ แบบไม่่ขึ้นบรรทัดใหม่

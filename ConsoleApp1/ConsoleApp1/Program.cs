@@ -175,8 +175,43 @@ namespace ConsoleApp1
             Console.WriteLine("--------Chapter 9 :: Array----------");
             //สร้าง obj ใหม่จาก class Array_9
             Array_9 array_9 = new Array_9();
-            // เรียก Method --
+            // เรียก Method --การสร้าง Array 1
+            array_9.Array1Dimention();
+
+            Console.WriteLine("------------------");
+            // เรียก Method --การสร้าง Array 1 มิติ จาก For Loop
+            array_9.ForLoopArray1Dimention();
+
+            Console.WriteLine("------------------");
+            // เรียก Method --การสร้าง Array 2 มิติ
+            array_9.Array2Dimention();
+
+            Console.WriteLine("------------------");
+            // เรียก Method --การสร้าง Array 2 มิติ จาก For Loop
+            array_9.ForLoopArray2Dimention();
+
+            Console.WriteLine("------------------");
+            // เรียก Method --การสร้าง JaggedArray
             array_9.JaggedArray();
+
+            Console.WriteLine("------------------");
+            // เรียก Method --การสร้าง JaggedArray เพิ่มเติม
+            array_9.JaggedArray2();
+
+
+            /*-----------------------------------------------
+                Chapter 10 :: Method
+            ------------------------------------------------*/
+            Console.WriteLine("--------Chapter 10 :: Method----------");
+            //สร้าง  obj ใหม่จาก class Method_10
+            Method_10 method = new Method_10();
+            //เรียก Method --การสร้าง Method
+            method.CreatingMethod();
+
+            Console.WriteLine("------------------");
+            //เรียก Method --การสร้าง Method เพิ่มเติม
+            method.CreatingMethod2();
+
 
             //ทำให้หน้าจอค้างไว้ เมื่อประมวนผลเสร็จ
             Console.ReadKey();

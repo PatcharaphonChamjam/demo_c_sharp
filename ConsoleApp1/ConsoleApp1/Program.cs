@@ -212,6 +212,37 @@ namespace ConsoleApp1
             //เรียก Method --การสร้าง Method เพิ่มเติม
             method.CreatingMethod2();
 
+           /*-----------------------------------------------
+                Chapter 11 :: Class
+            ------------------------------------------------*/
+            Console.WriteLine("--------Chapter 11 :: Class----------");
+            //Class_11 class_11 = new Class_11();
+            //class_11.ShowDistance();
+
+
+            /*-----------------------------------------------
+                Chapter 12 :: Object
+            ------------------------------------------------*/
+            Console.WriteLine("--------Chapter 12 :: Object----------");
+            //สร้าง obj ใหม่จาก Class Objects_12
+            Objects_12 objects = new Objects_12();
+            //Assisgh ค่า Paper ให้ name
+            objects.name = "Paper";
+            //Assisgh ค่า width = 8 ,height = 11 
+            objects.setDimension(8,11);
+
+            //สร้าง obj ใหม่จาก Class Objects_12
+            Objects_12 objects2 = new Objects_12();
+            //Assisgh ค่า Computer Screen ให้ name
+            objects2.name = "Computer Screen";
+            //Assisgh ค่า width = 16 ,height = 9
+            objects2.setDimension(16,9);
+
+            //ให้แสดงค่า Object Paper has area = 88 in ^ 2
+            Console.WriteLine("Object " + objects.name + " has area = " + objects.CalculateArea() + " in ^ 2");
+            //ให้แสดงค่า Object Computer Acreen has area = 144 in ^ 2
+            Console.WriteLine("Object " + objects2.name + " has area = " + objects2.CalculateArea() + " in ^ 2");
+
 
             //ทำให้หน้าจอค้างไว้ เมื่อประมวนผลเสร็จ
             Console.ReadKey();

@@ -10,13 +10,6 @@ namespace ConsoleApp1
 {
     internal class Program
     {
-        //TODO สร้าง class ตามหัวข้อ 1 - 12
-        //TODO สร้าง Method ใน Class ที่สร้างตามหัวข้อ
-        //TODO เรียกใช้ Method จาก Class ต่างๆใน Program.cs
-
-        //TODO Comment Code Every Line
-        //Group Code in Main 
-
         static void Main(string[] args)
         {
             //การแสดงข้อความ Start พร้อมกับ DateTime ปัจจุบัน
@@ -44,45 +37,45 @@ namespace ConsoleApp1
             variableAndData.DoubleNumberType();*/
 
 
-             /*-----------------------------------------------
-                Chapter 4 :: ค่าคงที่
-            ------------------------------------------------*/
+            /*-----------------------------------------------
+               Chapter 4 :: ค่าคงที่
+           ------------------------------------------------*/
             /* Console.WriteLine("--------Chapter 4 :: Constants----------");
              //สร้าง obj ใหม่จาก class Constants_4
             Constants_4 constants = new Constants_4();
             // เรียก Method --กำหนดค่าของค่าคงที่ (Constants)
             constants.ConstantsDeclaration();*/
-            
+
             //Console.WriteLine("------------------");
             // เรียก Method --กำหนดค่าของค่าคงที่ (Constants) ใน Array
             //constants.ConstantsArray();
-            
+
 
             /*-----------------------------------------------
                 Chapter 5 :: ตัวดำเนินการ
             ------------------------------------------------*/
-             /*Console.WriteLine("--------Chapter 5 :: Operators----------");
-             //สร้าง obj ใหม่จาก class Operators_5
-             Operators_5 operators5 = new Operators_5();
-            // เรียก Method --ตัวดำเนินการทางคณิตศาสตร (บวก ลบ คูณ หาร)
-            operators5.ArithmeticOperators();
+            /*Console.WriteLine("--------Chapter 5 :: Operators----------");
+            //สร้าง obj ใหม่จาก class Operators_5
+            Operators_5 operators5 = new Operators_5();
+           // เรียก Method --ตัวดำเนินการทางคณิตศาสตร (บวก ลบ คูณ หาร)
+           operators5.ArithmeticOperators();
 
-            Console.WriteLine("------------------");
-            // เรียก Method --การเปรียบเทียบความสัมพันธ์ แสดงผลเป็น True กับ False
-            operators5.RelationComparison();
+           Console.WriteLine("------------------");
+           // เรียก Method --การเปรียบเทียบความสัมพันธ์ แสดงผลเป็น True กับ False
+           operators5.RelationComparison();
 
-            Console.WriteLine("------------------");
-            // เรียก Method --การดำเนินการเชิงตรรก 
-            operators5.LogicalOperation();
+           Console.WriteLine("------------------");
+           // เรียก Method --การดำเนินการเชิงตรรก 
+           operators5.LogicalOperation();
 
-            Console.WriteLine("------------------");
-             // เรียก Method --การดำเนินการเชิงตรรก เพิ่มเติม
-            operators5.LogicalOperation2();
+           Console.WriteLine("------------------");
+            // เรียก Method --การดำเนินการเชิงตรรก เพิ่มเติม
+           operators5.LogicalOperation2();
 
-            Console.WriteLine("------------------");
-             // เรียก Method --การใช้เงื่อนไข Ternary ถ้าหาก True จะแสดงผล Index 0 ถ้า Flase จะแสดง Index 1
-            operators5.TernaryOperator();*/
-           
+           Console.WriteLine("------------------");
+            // เรียก Method --การใช้เงื่อนไข Ternary ถ้าหาก True จะแสดงผล Index 0 ถ้า Flase จะแสดง Index 1
+           operators5.TernaryOperator();*/
+
 
             /*-----------------------------------------------
                 Chapter 6 :: Input Output
@@ -225,7 +218,7 @@ namespace ConsoleApp1
             /*-----------------------------------------------
                 Chapter 12 :: Object
             ------------------------------------------------*/
-            Console.WriteLine("--------Chapter 12 :: Object----------");
+            /*Console.WriteLine("--------Chapter 12 :: Object----------");
             //สร้าง obj ใหม่จาก Class Objects_12
             Objects_12 objects = new Objects_12();
             //Assisgh ค่า Paper ให้ name
@@ -243,7 +236,7 @@ namespace ConsoleApp1
             //ให้แสดงค่า Object Paper has area = 88 in ^ 2
             Console.WriteLine("Object " + objects.name + " has area = " + objects.CalculateArea() + " in ^ 2");
             //ให้แสดงค่า Object Computer Acreen has area = 144 in ^ 2
-            Console.WriteLine("Object " + objects2.name + " has area = " + objects2.CalculateArea() + " in ^ 2");
+            Console.WriteLine("Object " + objects2.name + " has area = " + objects2.CalculateArea() + " in ^ 2");*/
 
 
             //ทำให้หน้าจอค้างไว้ เมื่อประมวนผลเสร็จ

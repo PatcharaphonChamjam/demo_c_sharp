@@ -31,8 +31,10 @@ namespace ConsoleApp1
         public void ForLoopArray1Dimention()
         {
             int[] array1 = new int[10];
+            //กำหนด Loop For 
             for(int i = 0; i < 10; i++)
             {
+                //กำหนดค่าใน Array 
                 array1[i] = (i + 1) * 5;
                 Console.Write(array1[i] +",");
             }

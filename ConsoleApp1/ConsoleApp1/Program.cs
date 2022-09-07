@@ -217,9 +217,9 @@ namespace ConsoleApp1
             /*-----------------------------------------------
                  Chapter 11 :: Class
              ------------------------------------------------*/
-            Console.WriteLine("--------Chapter 11 :: Class----------");
+            /*Console.WriteLine("--------Chapter 11 :: Class----------");
             Class_11 class_11 = new Class_11();
-            class_11.Run();
+            class_11.Run();*/
 
 
             /*-----------------------------------------------

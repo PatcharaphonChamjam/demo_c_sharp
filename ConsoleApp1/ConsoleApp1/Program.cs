@@ -58,6 +58,32 @@ namespace ConsoleApp1
             constants.ConstantsArray();
             
 
+            /*-----------------------------------------------
+                Chapter 5 :: ตัวดำเนินการ
+            ------------------------------------------------*/
+             Console.WriteLine("--------Chapter 5 :: Operators----------");
+             //สร้าง obj ใหม่จาก class Operators_5
+             Operators_5 operators = new Operators_5();
+            // เรียก Method --ตัวดำเนินการทางคณิตศาสตร (บวก ลบ คูณ หาร)
+            operators.ArithmeticOperators();
+
+            Console.WriteLine("------------------");
+            // เรียก Method --การเปรียบเทียบความสัมพันธ์ แสดงผลเป็น True กับ False
+            operators.RelationComparison();
+
+            Console.WriteLine("------------------");
+            // เรียก Method --การดำเนินการเชิงตรรก 
+            operators.LogicalOperation();
+
+            Console.WriteLine("------------------");
+             // เรียก Method --การดำเนินการเชิงตรรก เพิ่มเติม
+            operators.LogicalOperation2();
+
+            Console.WriteLine("------------------");
+             // เรียก Method --การใช้เงื่อนไข Ternary ถ้าหาก True จะแสดงผล Index 0 ถ้า Flase จะแสดง Index 1
+            operators.TernaryOperator();
+           
+
 
 /*            //ตัวอย่าง  If else
             //สร้าง obj ใหม่จาก class SelectionStatement

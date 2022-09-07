@@ -25,15 +25,39 @@ namespace ConsoleApp1
             /*-----------------------------------------------
                 Chapter 3 :: ตัวแปรและประเภทข้อมูล
             ------------------------------------------------*/
+            Console.WriteLine("--------Chapter 3 :: VariableAndDataType----------");
             //สร้าง obj ใหม่จาก class VariableAndDataType_3
             VariableAndDataType_3 variableAndData = new VariableAndDataType_3();
             // เรียก Method --การตั้งค่าตัวแปร
             variableAndData.VariableDeclaration();
+            
+            Console.WriteLine("------------------");
             // เรียก Method --Boolean กำหนดค่าเป็น True
             variableAndData.Boolean();
+            
+            Console.WriteLine("------------------");
             // เรียก Method --กำหนดค่า Interger
             variableAndData.IntegerNumberType();
+            
+            Console.WriteLine("------------------");
             //DoubleNumberType
+            variableAndData.DoubleNumberType();
+
+
+             /*-----------------------------------------------
+                Chapter 4 :: ค่าคงที่
+            ------------------------------------------------*/
+             Console.WriteLine("--------Chapter 4 :: Constants----------");
+             //สร้าง obj ใหม่จาก class Constants_4
+            Constants_4 constants = new Constants_4();
+            // เรียก Method --กำหนดค่าของค่าคงที่ (Constants)
+            constants.ConstantsDeclaration();
+            
+            Console.WriteLine("------------------");
+            // เรียก Method --กำหนดค่าของค่าคงที่ (Constants) ใน Array
+            constants.ConstantsArray();
+            
+
 
 /*            //ตัวอย่าง  If else
             //สร้าง obj ใหม่จาก class SelectionStatement

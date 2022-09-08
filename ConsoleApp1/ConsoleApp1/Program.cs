@@ -244,18 +244,33 @@ namespace ConsoleApp1
             ------------------------------------------------*/
             /*Console.WriteLine("--------Chapter 13 :: Encapsulation----------");
             //สร้าง obj ใหม่จาก Class Encapsulation_13
-            Encapsulation_13 encapsulation = new Encapsulation_13();
+            Encapsulation_13 encapsulation1 = new Encapsulation_13();
             //กำหนดค่า Mars ในตัวแปร name ใน Class Encapsulation_13
-            encapsulation.name = "Mars";
+            encapsulation1.name = "Mars";
             //กำหนดค่า 3390 ในตัวแปร radius ใน Method SetRadius จาก Class Encapsulation_13
-            encapsulation.SetRadius(3390);
+            encapsulation1.SetRadius(3390);
 
             //แสดงค่า Planet name = Mars
-            Console.WriteLine("Planet name = " + encapsulation.name);
+            Console.WriteLine("Planet name = " + encapsulation1.name);
             //แสดงค่า Radius = 3390 km
-            Console.WriteLine("Radius = " + encapsulation.GetRadius() + " km");
+            Console.WriteLine("Radius = " + encapsulation1.GetRadius() + " km");
             //แสดงค่า Surface area ~144.472112 million square km
-            Console.WriteLine("Surface area ~" +encapsulation.GetSurfaceArea() /10E5 + " million square km");*/
+            Console.WriteLine("Surface area ~" + encapsulation1.GetSurfaceArea() / 10E5 + " million square km");
+
+            Console.WriteLine("------------------");
+            //สร้าง obj ใหม่จาก Class Encapsulation_13
+            Encapsulation_13 encapsulation2 = new Encapsulation_13();
+            //กำหนดค่า Earth ในตัวแปร name ใน Class Encapsulation_13
+            encapsulation2.name = "Earth";
+            //กำหนดค่า 6371 ในตัวแปร radius ใน Method SetRadius จาก Class Encapsulation_13
+            encapsulation2.SetRadius(6371);
+
+            //แสดงค่า Planet name = Earth
+            Console.WriteLine("Planet name = " + encapsulation2.name);
+            //แสดงค่า Radius = 6371 km
+            Console.WriteLine("Radius = " + encapsulation2.GetRadius() + " km");
+            //แสดงค่า Surface area ~510.26976 million square km
+            Console.WriteLine("Surface area ~" + encapsulation2.GetSurfaceArea() / 10E5 + " million square km");*/
 
 
 

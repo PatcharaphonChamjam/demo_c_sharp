@@ -40,15 +40,15 @@ namespace ConsoleApp1
             /*-----------------------------------------------
                Chapter 4 :: ค่าคงที่
            ------------------------------------------------*/
-            /* Console.WriteLine("--------Chapter 4 :: Constants----------");
-             //สร้าง obj ใหม่จาก class Constants_4
+            /*Console.WriteLine("--------Chapter 4 :: Constants----------");
+            //สร้าง obj ใหม่จาก class Constants_4
             Constants_4 constants = new Constants_4();
             // เรียก Method --กำหนดค่าของค่าคงที่ (Constants)
-            constants.ConstantsDeclaration();*/
+            constants.ConstantsDeclaration();
 
-            //Console.WriteLine("------------------");
+            Console.WriteLine("------------------");
             // เรียก Method --กำหนดค่าของค่าคงที่ (Constants) ใน Array
-            //constants.ConstantsArray();
+            constants.ConstantsArray();*/
 
 
             /*-----------------------------------------------

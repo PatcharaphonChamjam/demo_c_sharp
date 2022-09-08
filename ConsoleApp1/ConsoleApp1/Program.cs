@@ -212,7 +212,7 @@ namespace ConsoleApp1
              ------------------------------------------------*/
             /*Console.WriteLine("--------Chapter 11 :: Class----------");
             Class_11 class_11 = new Class_11();
-            class_11.Run();*/
+            
 
 
             /*-----------------------------------------------
@@ -237,6 +237,29 @@ namespace ConsoleApp1
             Console.WriteLine("Object " + objects.name + " has area = " + objects.CalculateArea() + " in ^ 2");
             //ให้แสดงค่า Object Computer Acreen has area = 144 in ^ 2
             Console.WriteLine("Object " + objects2.name + " has area = " + objects2.CalculateArea() + " in ^ 2");*/
+
+
+            /*-----------------------------------------------
+                Chapter 13 :: Encapsulation การห่อหุ้ม
+            ------------------------------------------------*/
+            /*Console.WriteLine("--------Chapter 13 :: Encapsulation----------");
+            //สร้าง obj ใหม่จาก Class Encapsulation_13
+            Encapsulation_13 encapsulation = new Encapsulation_13();
+            //กำหนดค่า Mars ในตัวแปร name ใน Class Encapsulation_13
+            encapsulation.name = "Mars";
+            //กำหนดค่า 3390 ในตัวแปร radius ใน Method SetRadius จาก Class Encapsulation_13
+            encapsulation.SetRadius(3390);
+
+            //แสดงค่า Planet name = Mars
+            Console.WriteLine("Planet name = " + encapsulation.name);
+            //แสดงค่า Radius = 3390 km
+            Console.WriteLine("Radius = " + encapsulation.GetRadius() + " km");
+            //แสดงค่า Surface area ~144.472112 million square km
+            Console.WriteLine("Surface area ~" +encapsulation.GetSurfaceArea() /10E5 + " million square km");*/
+
+
+
+
 
 
             //ทำให้หน้าจอค้างไว้ เมื่อประมวนผลเสร็จ

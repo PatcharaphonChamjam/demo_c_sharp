@@ -52,7 +52,9 @@
     <Compile Include="Inheritance_14_21.cs" />
     <Compile Include="Inheritance_14_22.cs" />
     <Compile Include="InputOutput_6.cs" />
-    <Compile Include="Interfaces_16.cs" />
+    <Compile Include="Interfaces_16_11.cs" />
+    <Compile Include="Interfaces_16_12_Cars.cs" />
+    <Compile Include="Interfaces_16_13_Boat.cs" />
     <Compile Include="Loop_8.cs" />
     <Compile Include="Method_10.cs" />
     <Compile Include="Objects_12.cs" />

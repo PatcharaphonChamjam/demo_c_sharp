@@ -6,12 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 
-
 namespace ConsoleApp1
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             //การแสดงข้อความ Start พร้อมกับ DateTime ปัจจุบัน
             Console.WriteLine("Start :{0}", DateTime.Now);
@@ -37,7 +36,6 @@ namespace ConsoleApp1
             //DoubleNumberType
             variableAndData.DoubleNumberType();*/
 
-
             /*-----------------------------------------------
                Chapter 4 :: ค่าคงที่
            ------------------------------------------------*/
@@ -50,7 +48,6 @@ namespace ConsoleApp1
             Console.WriteLine("------------------");
             // เรียก Method --กำหนดค่าของค่าคงที่ (Constants) ใน Array
             constants.ConstantsArray();*/
-
 
             /*-----------------------------------------------
                 Chapter 5 :: ตัวดำเนินการ
@@ -66,7 +63,7 @@ namespace ConsoleApp1
             operators5.RelationComparison();
 
             Console.WriteLine("------------------");
-            // เรียก Method --การดำเนินการเชิงตรรก 
+            // เรียก Method --การดำเนินการเชิงตรรก
             operators5.LogicalOperation();
 
             Console.WriteLine("------------------");
@@ -76,7 +73,6 @@ namespace ConsoleApp1
             Console.WriteLine("------------------");
             // เรียก Method --การใช้เงื่อนไข Ternary ถ้าหาก True จะแสดงผล Index 0 ถ้า Flase จะแสดง Index 1
             operators5.TernaryOperator();*/
-
 
             /*-----------------------------------------------
                 Chapter 6 :: Input Output
@@ -100,9 +96,8 @@ namespace ConsoleApp1
             inputOutput.Read();
 
             Console.WriteLine("------------------");
-            // เรียก Method --การรับค่า Keyboard 
+            // เรียก Method --การรับค่า Keyboard
             inputOutput.ReadLine();*/
-
 
             /*-----------------------------------------------
                 Chapter 7 :: If Else and Switch Case
@@ -115,7 +110,7 @@ namespace ConsoleApp1
             selectionStatement.IfElse();
 
             Console.WriteLine("------------------");
-            //เรียก Method 
+            //เรียก Method
             selectionStatement.SwitchCase();
 
             Console.WriteLine("------------------");
@@ -128,9 +123,8 @@ namespace ConsoleApp1
             //แสดงค่าจาก Props
             Console.WriteLine(selectionStatement.MyPropertyTest);*/
 
-
             /*-----------------------------------------------
-                Chapter 8 :: การวนซ้ำ Loop 
+                Chapter 8 :: การวนซ้ำ Loop
             ------------------------------------------------*/
             /*Console.WriteLine("--------Chapter 8 :: Loop----------");
             //สร้าง obj ใหม่จาก class ILoop_8nputOutput_6
@@ -162,7 +156,6 @@ namespace ConsoleApp1
             // เรียก Method --การข้ามการวนซ้ำ ในรอบปัจจุบัน
             loop.Continue();*/
 
-
             /*-----------------------------------------------
                 Chapter 9 :: Array
             ------------------------------------------------*/
@@ -192,7 +185,6 @@ namespace ConsoleApp1
             // เรียก Method --การสร้าง JaggedArray เพิ่มเติม
             array_9.JaggedArray2();*/
 
-
             /*-----------------------------------------------
                 Chapter 10 :: Method
             ------------------------------------------------*/
@@ -206,25 +198,21 @@ namespace ConsoleApp1
             //เรียก Method --การสร้าง Method เพิ่มเติม
             method.CreatingMethod2();*/
 
-
-
             /*-----------------------------------------------
                  Chapter 11 :: Class
              ------------------------------------------------*/
             /*Console.WriteLine("--------Chapter 11 :: Class----------");
             Class_11 class_11 = new Class_11();
-            
-
 
             /*-----------------------------------------------
-                Chapter 12 :: Object 
+                Chapter 12 :: Object
             ------------------------------------------------*/
             /*Console.WriteLine("--------Chapter 12 :: Object----------");
             //สร้าง obj ใหม่จาก Class Objects_12
             Objects_12 objects = new Objects_12();
             //Assisgh ค่า Paper ให้ name
             objects.name = "Paper";
-            //Assisgh ค่า width = 8 ,height = 11 
+            //Assisgh ค่า width = 8 ,height = 11
             objects.setDimension(8,11);
 
             //สร้าง obj ใหม่จาก Class Objects_12
@@ -238,7 +226,6 @@ namespace ConsoleApp1
             Console.WriteLine("Object " + objects.name + " has area = " + objects.CalculateArea() + " in ^ 2");
             //ให้แสดงค่า Object Computer Acreen has area = 144 in ^ 2
             Console.WriteLine("Object " + objects2.name + " has area = " + objects2.CalculateArea() + " in ^ 2");*/
-
 
             /*-----------------------------------------------
                 Chapter 13 :: Encapsulation การห่อหุ้ม
@@ -257,7 +244,6 @@ namespace ConsoleApp1
             Console.WriteLine("Radius = " + encapsulation.GetRadius() + " km");
             //แสดงค่า Surface area ~144.472112 million square km
             Console.WriteLine("Surface area ~" +encapsulation.GetSurfaceArea() /10E5 + " million square km");*/
-
 
             /*-----------------------------------------------
                 Chapter 14 :: Inheritance การสืบทอดอำนาจ
@@ -312,11 +298,10 @@ namespace ConsoleApp1
             //แสดงผล 2 * 3 = 6
             Console.WriteLine("{0} * {1} = {2}", multiply.a, multiply.b, multiply.Result());*/
 
-
-             /*-----------------------------------------------
-                Chapter 15 :: Inheritance การสืบทอดอำนาจ
-            ------------------------------------------------*/
-            Console.WriteLine("--------Chapter 15 :: Inheritance----------");
+            /*-----------------------------------------------
+               Chapter 15 :: Inheritance การสืบทอดอำนาจ
+           ------------------------------------------------*/
+            /*Console.WriteLine("--------Chapter 15 :: Inheritance----------");
 
             //สร้าง obj ใหม่จาก Class Polymorphism_15_0
             Polymorphism_15_0 polymorphism = new Polymorphism_15_0();
@@ -325,19 +310,23 @@ namespace ConsoleApp1
 
             Console.WriteLine("------------------");
             //เรียกใช้ Method PolomorphismMoveArray
-            polymorphism.PolomorphismMoveArray();
+            polymorphism.PolomorphismMoveArray();*/
 
-          
+            /*-----------------------------------------------
+                Chapter 16 :: Interfaces
+            ------------------------------------------------*/
+            Console.WriteLine("--------Chapter 16 :: Interfaces----------");
+            Interfaces_16_12_Cars car = new Interfaces_16_12_Cars();
+            car.StartEngine();
+            car.Move();
 
-
+            Console.WriteLine("------------------");
+            Interfaces_16_13_Boat boat = new Interfaces_16_13_Boat();
+            boat.StartEngine();
+            boat.Move();
 
             //ทำให้หน้าจอค้างไว้ เมื่อประมวนผลเสร็จ
             Console.ReadKey();
         }
-
-       
-
-
     }
-
 }

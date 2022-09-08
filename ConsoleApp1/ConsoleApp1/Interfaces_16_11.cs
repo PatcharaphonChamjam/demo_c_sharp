@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class Interfaces_16
+    internal interface Interfaces_16_11
     {
+        void Move();
+
+        void StartEngine();
     }
 }

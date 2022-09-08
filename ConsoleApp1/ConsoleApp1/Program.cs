@@ -216,7 +216,7 @@ namespace ConsoleApp1
 
 
             /*-----------------------------------------------
-                Chapter 12 :: Object
+                Chapter 12 :: Object 
             ------------------------------------------------*/
             /*Console.WriteLine("--------Chapter 12 :: Object----------");
             //สร้าง obj ใหม่จาก Class Objects_12
@@ -273,9 +273,38 @@ namespace ConsoleApp1
             Console.WriteLine("Surface area ~" + encapsulation2.GetSurfaceArea() / 10E5 + " million square km");*/
 
 
+            /*-----------------------------------------------
+                Chapter 14 :: Inheritance การสืบทอดอำนาจ
+            ------------------------------------------------*/
+            /*Console.WriteLine("--------Chapter 14 :: Inheritance----------");
+            //สร้าง obj ใหม่จาก Class Inheritance_14_1
+            Inheritance_14_1 baseclass = new Inheritance_14_1(3,4);
+            //แสดงค่า Rectangle 1
+            Console.WriteLine("Rectangle 1");
+            //แสดงค่า size [3,4]
+            Console.WriteLine("size [{0},{1}]",baseclass.x,baseclass.y);
+            //แสดงค่า Area = 12
+            Console.WriteLine("Area = {0}",baseclass.GetArea());
 
+            Console.WriteLine("------------------");
+            //สร้าง obj ใหม่จาก Class Inheritance_14_1
+            Inheritance_14_2 deliveredclass1 = new Inheritance_14_2(5,4,3);
+            //แสดงค่า Cuboid 1
+            Console.WriteLine("Cuboid 1");
+            //แสดงค่า size [5,4,3]
+            Console.WriteLine("size [{0},{1},{2}]", deliveredclass1.x, deliveredclass1.y, deliveredclass1.z);
+            //แสดงค่า Volumn = 60
+            Console.WriteLine("Volumn = {0}", deliveredclass1.GetVolumn());
 
-
+            Console.WriteLine("------------------");
+            //สร้าง obj ใหม่จาก Class Inheritance_14_1
+            Inheritance_14_2 deliveredclass2 = new Inheritance_14_2(10, 10, 10);
+            //แสดงค่า Cuboid 2
+            Console.WriteLine("Cuboid 2");
+            //แสดงค่า size [10,10,10]
+            Console.WriteLine("size [{0},{1},{2}]", deliveredclass2.x, deliveredclass2.y, deliveredclass2.z);
+            //แสดงค่า Volumn = 1000
+            Console.WriteLine("Volumn = {0}", deliveredclass2.GetVolumn());*/
 
             //ทำให้หน้าจอค้างไว้ เมื่อประมวนผลเสร็จ
             Console.ReadKey();

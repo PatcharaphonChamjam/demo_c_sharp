@@ -57,7 +57,11 @@
     <Compile Include="Method_10.cs" />
     <Compile Include="Objects_12.cs" />
     <Compile Include="Operators_5.cs" />
-    <Compile Include="Polymorphism_15.cs" />
+    <Compile Include="Polymorphism_15_0.cs" />
+    <Compile Include="Polymorphism_15_1_Animals.cs" />
+    <Compile Include="Polymorphism_15_2_Dog.cs" />
+    <Compile Include="Polymorphism_15_3_Fish.cs" />
+    <Compile Include="Polymorphism_15_4_Bird.cs" />
     <Compile Include="SelectionStatement_7.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

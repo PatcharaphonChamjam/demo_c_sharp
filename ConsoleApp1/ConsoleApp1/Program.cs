@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Remoting.Lifetime;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 
 namespace ConsoleApp1
@@ -310,6 +311,25 @@ namespace ConsoleApp1
             multiply.b = 3;
             //แสดงผล 2 * 3 = 6
             Console.WriteLine("{0} * {1} = {2}", multiply.a, multiply.b, multiply.Result());*/
+
+
+             /*-----------------------------------------------
+                Chapter 15 :: Inheritance การสืบทอดอำนาจ
+            ------------------------------------------------*/
+            Console.WriteLine("--------Chapter 15 :: Inheritance----------");
+
+            //สร้าง obj ใหม่จาก Class Polymorphism_15_0
+            Polymorphism_15_0 polymorphism = new Polymorphism_15_0();
+            //เรียกใช้ Method PolomorphismMove
+            polymorphism.PolomorphismMove();
+
+            Console.WriteLine("------------------");
+            //เรียกใช้ Method PolomorphismMoveArray
+            polymorphism.PolomorphismMoveArray();
+
+          
+
+
 
             //ทำให้หน้าจอค้างไว้ เมื่อประมวนผลเสร็จ
             Console.ReadKey();

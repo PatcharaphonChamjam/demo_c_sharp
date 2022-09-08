@@ -47,8 +47,10 @@
     <Compile Include="Class_11.cs" />
     <Compile Include="Constants_4.cs" />
     <Compile Include="Encapsulation_13.cs" />
-    <Compile Include="Inheritance_14_1.cs" />
-    <Compile Include="Inheritance_14_2.cs" />
+    <Compile Include="Inheritance_14_11.cs" />
+    <Compile Include="Inheritance_14_12.cs" />
+    <Compile Include="Inheritance_14_21.cs" />
+    <Compile Include="Inheritance_14_22.cs" />
     <Compile Include="InputOutput_6.cs" />
     <Compile Include="Interfaces_16.cs" />
     <Compile Include="Loop_8.cs" />

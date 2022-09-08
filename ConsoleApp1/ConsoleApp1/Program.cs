@@ -244,33 +244,18 @@ namespace ConsoleApp1
             ------------------------------------------------*/
             /*Console.WriteLine("--------Chapter 13 :: Encapsulation----------");
             //สร้าง obj ใหม่จาก Class Encapsulation_13
-            Encapsulation_13 encapsulation1 = new Encapsulation_13();
+            Encapsulation_13 encapsulation = new Encapsulation_13();
             //กำหนดค่า Mars ในตัวแปร name ใน Class Encapsulation_13
-            encapsulation1.name = "Mars";
+            encapsulation.name = "Mars";
             //กำหนดค่า 3390 ในตัวแปร radius ใน Method SetRadius จาก Class Encapsulation_13
-            encapsulation1.SetRadius(3390);
+            encapsulation.SetRadius(3390);
 
             //แสดงค่า Planet name = Mars
-            Console.WriteLine("Planet name = " + encapsulation1.name);
+            Console.WriteLine("Planet name = " + encapsulation.name);
             //แสดงค่า Radius = 3390 km
-            Console.WriteLine("Radius = " + encapsulation1.GetRadius() + " km");
+            Console.WriteLine("Radius = " + encapsulation.GetRadius() + " km");
             //แสดงค่า Surface area ~144.472112 million square km
-            Console.WriteLine("Surface area ~" + encapsulation1.GetSurfaceArea() / 10E5 + " million square km");
-
-            Console.WriteLine("------------------");
-            //สร้าง obj ใหม่จาก Class Encapsulation_13
-            Encapsulation_13 encapsulation2 = new Encapsulation_13();
-            //กำหนดค่า Earth ในตัวแปร name ใน Class Encapsulation_13
-            encapsulation2.name = "Earth";
-            //กำหนดค่า 6371 ในตัวแปร radius ใน Method SetRadius จาก Class Encapsulation_13
-            encapsulation2.SetRadius(6371);
-
-            //แสดงค่า Planet name = Earth
-            Console.WriteLine("Planet name = " + encapsulation2.name);
-            //แสดงค่า Radius = 6371 km
-            Console.WriteLine("Radius = " + encapsulation2.GetRadius() + " km");
-            //แสดงค่า Surface area ~510.26976 million square km
-            Console.WriteLine("Surface area ~" + encapsulation2.GetSurfaceArea() / 10E5 + " million square km");*/
+            Console.WriteLine("Surface area ~" +encapsulation.GetSurfaceArea() /10E5 + " million square km");*/
 
 
             /*-----------------------------------------------
@@ -278,17 +263,17 @@ namespace ConsoleApp1
             ------------------------------------------------*/
             /*Console.WriteLine("--------Chapter 14 :: Inheritance----------");
             //สร้าง obj ใหม่จาก Class Inheritance_14_1
-            Inheritance_14_1 baseclass = new Inheritance_14_1(3,4);
+            Inheritance_14_11 baseclass = new Inheritance_14_11(3, 4);
             //แสดงค่า Rectangle 1
             Console.WriteLine("Rectangle 1");
             //แสดงค่า size [3,4]
-            Console.WriteLine("size [{0},{1}]",baseclass.x,baseclass.y);
+            Console.WriteLine("size [{0},{1}]", baseclass.x, baseclass.y);
             //แสดงค่า Area = 12
-            Console.WriteLine("Area = {0}",baseclass.GetArea());
+            Console.WriteLine("Area = {0}", baseclass.GetArea());
 
             Console.WriteLine("------------------");
             //สร้าง obj ใหม่จาก Class Inheritance_14_1
-            Inheritance_14_2 deliveredclass1 = new Inheritance_14_2(5,4,3);
+            Inheritance_14_12 deliveredclass1 = new Inheritance_14_12(5, 4, 3);
             //แสดงค่า Cuboid 1
             Console.WriteLine("Cuboid 1");
             //แสดงค่า size [5,4,3]
@@ -298,13 +283,33 @@ namespace ConsoleApp1
 
             Console.WriteLine("------------------");
             //สร้าง obj ใหม่จาก Class Inheritance_14_1
-            Inheritance_14_2 deliveredclass2 = new Inheritance_14_2(10, 10, 10);
+            Inheritance_14_12 deliveredclass2 = new Inheritance_14_12(10, 10, 10);
             //แสดงค่า Cuboid 2
             Console.WriteLine("Cuboid 2");
             //แสดงค่า size [10,10,10]
             Console.WriteLine("size [{0},{1},{2}]", deliveredclass2.x, deliveredclass2.y, deliveredclass2.z);
             //แสดงค่า Volumn = 1000
-            Console.WriteLine("Volumn = {0}", deliveredclass2.GetVolumn());*/
+            Console.WriteLine("Volumn = {0}", deliveredclass2.GetVolumn());
+
+            Console.WriteLine("------------------");
+            //สร้าง obj ใหม่จาก Class Inheritance_14_21
+            Inheritance_14_21 plusnumber = new Inheritance_14_21();
+            //กำหนดค่า 1 ในตัวแปร a
+            plusnumber.a = 1;
+            //กำหนดค่า 2 ในตัวแปร b
+            plusnumber.b = 2;
+            //แสดงผล 1 + 2 = 3
+            Console.WriteLine("{0} + {1} = {2}", plusnumber.a, plusnumber.b, plusnumber.Result());
+
+            Console.WriteLine("------------------");
+            //สร้าง obj ใหม่จาก Class Inheritance_14_22
+            Inheritance_14_22 multiply = new Inheritance_14_22();
+            //กำหนดค่า 2 ในตัวแปร a
+            multiply.a = 2;
+            //กำหนดค่า 3 ในตัวแปร b
+            multiply.b = 3;
+            //แสดงผล 2 * 3 = 6
+            Console.WriteLine("{0} * {1} = {2}", multiply.a, multiply.b, multiply.Result());*/
 
             //ทำให้หน้าจอค้างไว้ เมื่อประมวนผลเสร็จ
             Console.ReadKey();

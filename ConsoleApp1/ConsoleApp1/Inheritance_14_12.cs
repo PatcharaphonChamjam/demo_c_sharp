@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public class Inheritance_14_2 : Inheritance_14_1
+    public class Inheritance_14_12 : Inheritance_14_11
     {
         //กำหนดตัวแปร z Type int ,publi
         public int z;
 
         //กำหนด Constuctor รับค่า x,y,z โดย x,y สืบทอดมาจาก class Inheritance_14_1
-        public Inheritance_14_2(int x,int y,int z) : base(x,y)
+        public Inheritance_14_12(int x,int y,int z) : base(x,y)
         {
             //กำหนดให้ค่า z ที่รับมา = z
             this.z = z;

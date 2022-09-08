@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public class Inheritance_14_1
+    public class Inheritance_14_11
     {
         //กำหนดตัวแปร x Type int ,public
         public int x;
@@ -14,7 +14,7 @@ namespace ConsoleApp1
         public int y;
 
         //กำหนด Constuctor รับค่า x และ Y ทีมี Type เป็น int
-        public Inheritance_14_1 (int x, int y)
+        public Inheritance_14_11 (int x, int y)
         {
             //กำหนดให้ค่า x ที่รับมา = x
             this.x = x;

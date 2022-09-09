@@ -325,6 +325,21 @@ namespace ConsoleApp1
             boat.StartEngine();
             boat.Move();
 
+            Console.WriteLine("------------------");
+            Interfaces_16_22_Circle circle = new Interfaces_16_22_Circle();
+            circle.radius = 5;
+            circle.Draw();
+            Console.WriteLine("with area " + circle.getArea() + " square inches");
+            circle.Draw3D();
+            Console.WriteLine("with surface area" + circle.getSurfaceArea() + " square inches");
+
+            Interfaces_16_23_Square square = new Interfaces_16_23_Square();
+            square.lenght = 4;
+            square.Draw();
+            Console.WriteLine("with area " + square.getArea() + " square inches");
+            square.Draw3D();
+            Console.WriteLine("with surface area" + circle.getSurfaceArea() + " square inches");
+
             //ทำให้หน้าจอค้างไว้ เมื่อประมวนผลเสร็จ
             Console.ReadKey();
         }

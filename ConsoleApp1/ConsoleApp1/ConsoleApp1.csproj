@@ -55,6 +55,9 @@
     <Compile Include="Interfaces_16_11.cs" />
     <Compile Include="Interfaces_16_12_Cars.cs" />
     <Compile Include="Interfaces_16_13_Boat.cs" />
+    <Compile Include="Interfaces_16_21.cs" />
+    <Compile Include="Interfaces_16_22_Circle.cs" />
+    <Compile Include="Interfaces_16_23_Square.cs" />
     <Compile Include="Loop_8.cs" />
     <Compile Include="Method_10.cs" />
     <Compile Include="Objects_12.cs" />

@@ -47,6 +47,7 @@
     <Compile Include="Class_11.cs" />
     <Compile Include="Constants_4.cs" />
     <Compile Include="Encapsulation_13.cs" />
+    <Compile Include="Exceptions\ClassException.cs" />
     <Compile Include="Inheritance_14_11.cs" />
     <Compile Include="Inheritance_14_12.cs" />
     <Compile Include="Inheritance_14_21.cs" />
@@ -60,6 +61,8 @@
     <Compile Include="Interfaces_16_23_Square.cs" />
     <Compile Include="Loop_8.cs" />
     <Compile Include="Method_10.cs" />
+    <Compile Include="Models\Class1.cs" />
+    <Compile Include="Models\Generate\Class1.cs" />
     <Compile Include="Objects_12.cs" />
     <Compile Include="Operators_5.cs" />
     <Compile Include="Polymorphism_15_0.cs" />

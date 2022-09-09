@@ -5,6 +5,8 @@ using System.Runtime.Remoting.Lifetime;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
+using ConsoleApp1.Models;
+using ConsoleApp1.Exceptions;
 
 namespace ConsoleApp1
 {
@@ -312,33 +314,89 @@ namespace ConsoleApp1
             //เรียกใช้ Method PolomorphismMoveArray
             polymorphism.PolomorphismMoveArray();*/
 
+            #region Chapter 16
+
             /*-----------------------------------------------
                 Chapter 16 :: Interfaces
             ------------------------------------------------*/
-            Console.WriteLine("--------Chapter 16 :: Interfaces----------");
+            /*Console.WriteLine("--------Chapter 16 :: Interfaces----------");
+            //สร้าง obj ใหม่จาก Interfaces_16_12_Cars
             Interfaces_16_12_Cars car = new Interfaces_16_12_Cars();
+            //เรียกใช้ Method StartEngine จาก Interfaces_16_12_Cars
             car.StartEngine();
+            //เรียกใช้ Method Move จาก Interfaces_16_12_Cars
             car.Move();
 
             Console.WriteLine("------------------");
+            //สร้าง obj ใหม่จาก Interfaces_16_13_Boat
             Interfaces_16_13_Boat boat = new Interfaces_16_13_Boat();
+            //เรียกใช้ Method StartEngine
             boat.StartEngine();
+            //เรียกใช้ Method Move
             boat.Move();
 
             Console.WriteLine("------------------");
+            //สร้าง obj ใหม่จาก Interfaces_16_22_Circle
             Interfaces_16_22_Circle circle = new Interfaces_16_22_Circle();
+            //กำหนดค่า 5 ให้ตัวแปร radius
             circle.radius = 5;
+            //เรียกใช้ Method Draw
             circle.Draw();
+            //แสดงผล with area 78.5 square inches
             Console.WriteLine("with area " + circle.getArea() + " square inches");
+            //เรียกใช้ Method Draw3D
             circle.Draw3D();
-            Console.WriteLine("with surface area" + circle.getSurfaceArea() + " square inches");
+            //แสดงผล with surface area 314 square inches
+            Console.WriteLine("with surface area " + circle.getSurfaceArea() + " square inches");
 
+            //สร้าง obj ใหม่จาก Interfaces_16_23_Square
             Interfaces_16_23_Square square = new Interfaces_16_23_Square();
+            //กำหนดค่า 4 ให้ตัวแปร lenght
             square.lenght = 4;
+            //เรียกใช้ Method Draw --> Draw square
             square.Draw();
+            //แสดงผล with area 16 square inches
             Console.WriteLine("with area " + square.getArea() + " square inches");
+            //เรียกใช้ Method Draw3D -->
             square.Draw3D();
-            Console.WriteLine("with surface area" + circle.getSurfaceArea() + " square inches");
+            //แสดงผล with surface area314 square inches
+            Console.WriteLine("with surface area " + circle.getSurfaceArea() + " square inches");*/
+
+            /*    var class1 = new Class1();
+                class1.SetId(1);*/
+            /* class2 = new Models.Generate.Class1();*/
+
+            #endregion Chapter 16
+
+            int a;
+            int b;
+
+            Console.WriteLine("Divider Program");
+
+            //
+            try
+            {
+                Console.Write("Enter number a: ");
+                a = Int16.Parse(Console.ReadLine());
+                Console.Write("Enter number b: ");
+                b = Int16.Parse(Console.ReadLine());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception Happening : " + ex.Message + ex.GetType());
+            }
+
+            /* try
+             {
+                 Console.WriteLine("The result of a / b is " + (a / b));
+             }
+             catch (DivideByZeroException ex)
+             {
+                 Console.WriteLine("Exception Divide by Zero occur:" + ex);
+             }
+             */
+
+            /*throw new ClassException("name");*/
 
             //ทำให้หน้าจอค้างไว้ เมื่อประมวนผลเสร็จ
             Console.ReadKey();

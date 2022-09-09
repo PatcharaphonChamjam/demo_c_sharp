@@ -16,10 +16,10 @@ namespace Demo_Square
                 //square
                 Square square = new Square();
 
-                Console.Write("Enter value lengh of square : ");
+                Console.Write("Enter value length of square : ");
                 square.SetDimension(double.Parse(Console.ReadLine()));
 
-                Console.WriteLine("Formula is " + square.lenght + " * " + square.lenght + " The area of the square is : " + square.Calculate());
+                Console.WriteLine("Formula is " + square.length + " * " + square.length + " The area of the square is : " + square.Calculate());
 
                 //rectangle
                 Rectangle rectangle = new Rectangle();

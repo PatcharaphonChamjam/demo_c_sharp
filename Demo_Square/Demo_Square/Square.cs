@@ -8,16 +8,16 @@ namespace Demo_Square
 {
     public class Square
     {
-        public double lenght;
+        public double length;
 
         public void SetDimension(double value)
         {
-            lenght = value;
+            length = value;
         }
 
         public double Calculate()
         {
-            return lenght * lenght;
+            return length * length;
         }
     }
 }

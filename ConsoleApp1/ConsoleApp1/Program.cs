@@ -20,7 +20,7 @@ namespace ConsoleApp1
             /*-----------------------------------------------
                 Chapter 3 :: ตัวแปรและประเภทข้อมูล
             ------------------------------------------------*/
-            /*Console.WriteLine("--------Chapter 3 :: VariableAndDataType----------");
+            Console.WriteLine("--------Chapter 3 :: VariableAndDataType----------");
             //สร้าง obj ใหม่จาก class VariableAndDataType_3
             VariableAndDataType_3 variableAndData = new VariableAndDataType_3();
             // เรียก Method --การตั้งค่าตัวแปร
@@ -36,12 +36,12 @@ namespace ConsoleApp1
 
             Console.WriteLine("------------------");
             //DoubleNumberType
-            variableAndData.DoubleNumberType();*/
+            variableAndData.DoubleNumberType();
 
             /*-----------------------------------------------
                Chapter 4 :: ค่าคงที่
            ------------------------------------------------*/
-            /*Console.WriteLine("--------Chapter 4 :: Constants----------");
+            Console.WriteLine("--------Chapter 4 :: Constants----------");
             //สร้าง obj ใหม่จาก class Constants_4
             Constants_4 constants = new Constants_4();
             // เรียก Method --กำหนดค่าของค่าคงที่ (Constants)
@@ -49,12 +49,12 @@ namespace ConsoleApp1
 
             Console.WriteLine("------------------");
             // เรียก Method --กำหนดค่าของค่าคงที่ (Constants) ใน Array
-            constants.ConstantsArray();*/
+            constants.ConstantsArray();
 
             /*-----------------------------------------------
                 Chapter 5 :: ตัวดำเนินการ
             ------------------------------------------------*/
-            /*Console.WriteLine("--------Chapter 5 :: Operators----------");
+            Console.WriteLine("--------Chapter 5 :: Operators----------");
             //สร้าง obj ใหม่จาก class Operators_5
             Operators_5 operators5 = new Operators_5();
             // เรียก Method --ตัวดำเนินการทางคณิตศาสตร (บวก ลบ คูณ หาร)
@@ -74,12 +74,12 @@ namespace ConsoleApp1
 
             Console.WriteLine("------------------");
             // เรียก Method --การใช้เงื่อนไข Ternary ถ้าหาก True จะแสดงผล Index 0 ถ้า Flase จะแสดง Index 1
-            operators5.TernaryOperator();*/
+            operators5.TernaryOperator();
 
             /*-----------------------------------------------
                 Chapter 6 :: Input Output
             ------------------------------------------------*/
-            /*Console.WriteLine("--------Chapter 6 :: Input Output----------");
+            Console.WriteLine("--------Chapter 6 :: Input Output----------");
             //สร้าง obj ใหม่จาก class InputOutput_6
             InputOutput_6 inputOutput = new InputOutput_6();
             // เรียก Method --การแสดงผลข้อความ แบบไม่่ขึ้นบรรทัดใหม่
@@ -99,13 +99,13 @@ namespace ConsoleApp1
 
             Console.WriteLine("------------------");
             // เรียก Method --การรับค่า Keyboard
-            inputOutput.ReadLine();*/
+            inputOutput.ReadLine();
 
             /*-----------------------------------------------
                 Chapter 7 :: If Else and Switch Case
             ------------------------------------------------*/
-            /*Console.WriteLine("--------Chapter 7 :: if else and switch case----------");
-           //ตัวอย่าง  If else
+            Console.WriteLine("--------Chapter 7 :: if else and switch case----------");
+            //ตัวอย่าง  If else
             //สร้าง obj ใหม่จาก class SelectionStatement_7
             SelectionStatement_7 selectionStatement = new SelectionStatement_7();
             //เรียก Method IfElse
@@ -121,14 +121,14 @@ namespace ConsoleApp1
             //แสดงค่าจากตัวแปร
             Console.WriteLine(myProp);
             //set ค่ากลับไปที่ Props
-            selectionStatement.MyPropertyTest=100;
+            selectionStatement.MyPropertyTest = 100;
             //แสดงค่าจาก Props
-            Console.WriteLine(selectionStatement.MyPropertyTest);*/
+            Console.WriteLine(selectionStatement.MyPropertyTest);
 
             /*-----------------------------------------------
                 Chapter 8 :: การวนซ้ำ Loop
             ------------------------------------------------*/
-            /*Console.WriteLine("--------Chapter 8 :: Loop----------");
+            Console.WriteLine("--------Chapter 8 :: Loop----------");
             //สร้าง obj ใหม่จาก class ILoop_8nputOutput_6
             Loop_8 loop = new Loop_8();
             // เรียก Method --วนลูป While
@@ -156,12 +156,12 @@ namespace ConsoleApp1
 
             Console.WriteLine("------------------");
             // เรียก Method --การข้ามการวนซ้ำ ในรอบปัจจุบัน
-            loop.Continue();*/
+            loop.Continue();
 
             /*-----------------------------------------------
                 Chapter 9 :: Array
             ------------------------------------------------*/
-            /*Console.WriteLine("--------Chapter 9 :: Array----------");
+            Console.WriteLine("--------Chapter 9 :: Array----------");
             //สร้าง obj ใหม่จาก class Array_9
             Array_9 array_9 = new Array_9();
             // เรียก Method --การสร้าง Array 1
@@ -185,12 +185,12 @@ namespace ConsoleApp1
 
             Console.WriteLine("------------------");
             // เรียก Method --การสร้าง JaggedArray เพิ่มเติม
-            array_9.JaggedArray2();*/
+            array_9.JaggedArray2();
 
             /*-----------------------------------------------
                 Chapter 10 :: Method
             ------------------------------------------------*/
-            /*Console.WriteLine("--------Chapter 10 :: Method----------");
+            Console.WriteLine("--------Chapter 10 :: Method----------");
             //สร้าง  obj ใหม่จาก class Method_10
             Method_10 method = new Method_10();
             //เรียก Method --การสร้าง Method
@@ -198,7 +198,7 @@ namespace ConsoleApp1
 
             Console.WriteLine("------------------");
             //เรียก Method --การสร้าง Method เพิ่มเติม
-            method.CreatingMethod2();*/
+            method.CreatingMethod2();
 
             /*-----------------------------------------------
                  Chapter 11 :: Class
@@ -209,30 +209,30 @@ namespace ConsoleApp1
             /*-----------------------------------------------
                 Chapter 12 :: Object
             ------------------------------------------------*/
-            /*Console.WriteLine("--------Chapter 12 :: Object----------");
+            Console.WriteLine("--------Chapter 12 :: Object----------");
             //สร้าง obj ใหม่จาก Class Objects_12
             Objects_12 objects = new Objects_12();
             //Assisgh ค่า Paper ให้ name
             objects.name = "Paper";
             //Assisgh ค่า width = 8 ,height = 11
-            objects.setDimension(8,11);
+            objects.setDimension(8, 11);
 
             //สร้าง obj ใหม่จาก Class Objects_12
             Objects_12 objects2 = new Objects_12();
             //Assisgh ค่า Computer Screen ให้ name
             objects2.name = "Computer Screen";
             //Assisgh ค่า width = 16 ,height = 9
-            objects2.setDimension(16,9);
+            objects2.setDimension(16, 9);
 
             //ให้แสดงค่า Object Paper has area = 88 in ^ 2
             Console.WriteLine("Object " + objects.name + " has area = " + objects.CalculateArea() + " in ^ 2");
             //ให้แสดงค่า Object Computer Acreen has area = 144 in ^ 2
-            Console.WriteLine("Object " + objects2.name + " has area = " + objects2.CalculateArea() + " in ^ 2");*/
+            Console.WriteLine("Object " + objects2.name + " has area = " + objects2.CalculateArea() + " in ^ 2");
 
             /*-----------------------------------------------
                 Chapter 13 :: Encapsulation การห่อหุ้ม
             ------------------------------------------------*/
-            /*Console.WriteLine("--------Chapter 13 :: Encapsulation----------");
+            Console.WriteLine("--------Chapter 13 :: Encapsulation----------");
             //สร้าง obj ใหม่จาก Class Encapsulation_13
             Encapsulation_13 encapsulation = new Encapsulation_13();
             //กำหนดค่า Mars ในตัวแปร name ใน Class Encapsulation_13
@@ -245,12 +245,12 @@ namespace ConsoleApp1
             //แสดงค่า Radius = 3390 km
             Console.WriteLine("Radius = " + encapsulation.GetRadius() + " km");
             //แสดงค่า Surface area ~144.472112 million square km
-            Console.WriteLine("Surface area ~" +encapsulation.GetSurfaceArea() /10E5 + " million square km");*/
+            Console.WriteLine("Surface area ~" + encapsulation.GetSurfaceArea() / 10E5 + " million square km");
 
             /*-----------------------------------------------
                 Chapter 14 :: Inheritance การสืบทอดอำนาจ
             ------------------------------------------------*/
-            /*Console.WriteLine("--------Chapter 14 :: Inheritance----------");
+            Console.WriteLine("--------Chapter 14 :: Inheritance----------");
             //สร้าง obj ใหม่จาก Class Inheritance_14_1
             Inheritance_14_11 baseclass = new Inheritance_14_11(3, 4);
             //แสดงค่า Rectangle 1
@@ -298,7 +298,7 @@ namespace ConsoleApp1
             //กำหนดค่า 3 ในตัวแปร b
             multiply.b = 3;
             //แสดงผล 2 * 3 = 6
-            Console.WriteLine("{0} * {1} = {2}", multiply.a, multiply.b, multiply.Result());*/
+            Console.WriteLine("{0} * {1} = {2}", multiply.a, multiply.b, multiply.Result());
 
             /*-----------------------------------------------
                Chapter 15 :: Inheritance การสืบทอดอำนาจ
@@ -319,7 +319,7 @@ namespace ConsoleApp1
             /*-----------------------------------------------
                 Chapter 16 :: Interfaces
             ------------------------------------------------*/
-            /*Console.WriteLine("--------Chapter 16 :: Interfaces----------");
+            Console.WriteLine("--------Chapter 16 :: Interfaces----------");
             //สร้าง obj ใหม่จาก Interfaces_16_12_Cars
             Interfaces_16_12_Cars car = new Interfaces_16_12_Cars();
             //เรียกใช้ Method StartEngine จาก Interfaces_16_12_Cars
@@ -360,7 +360,7 @@ namespace ConsoleApp1
             //เรียกใช้ Method Draw3D -->
             square.Draw3D();
             //แสดงผล with surface area314 square inches
-            Console.WriteLine("with surface area " + circle.getSurfaceArea() + " square inches");*/
+            Console.WriteLine("with surface area " + circle.getSurfaceArea() + " square inches");
 
             /*    var class1 = new Class1();
                 class1.SetId(1);*/

@@ -2,6 +2,7 @@
 using MoviesAPI.Entities;
 using MoviesAPI.Services;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MoviesAPI.Controllers
 {
@@ -15,36 +16,44 @@ namespace MoviesAPI.Controllers
             this.repository = repository;
         }
 
-        [HttpGet]
-        public List<Genre> Get()
+        [HttpGet] //https://localhost:44305/allgenres
+        [HttpGet("list")] //https://localhost:44305/api/genres/list
+        [HttpGet("/allgenres")] //https://localhost:44305/allgenres
+        public async Task<ActionResult<List<Genre>>> Get()
         {
-            return repository.GetAllGenre();
+            return await repository.GetAllGenre();
         }
 
-        [HttpGet]
-        public Genre Get(int Id)
+        //[HttpGet("example")]
+        [HttpGet("{Id:int}/{param=john}")]
+        public ActionResult<Genre> Get(int Id, string param)
         {
             var genre = repository.GetGenreById(Id);
             if (genre == null)
             {
-                //return NotFound();
+                return NotFound();
             }
+            //return Ok(2);
+            //return Ok("Sam");
             return genre;
         }
 
         [HttpPost]
-        public void Post()
+        public ActionResult Post()
         {
+            return NoContent();
         }
 
         [HttpPut]
-        public void Put()
+        public ActionResult Put()
         {
+            return NoContent();
         }
 
         [HttpDelete]
-        public void Delete()
+        public ActionResult Delete()
         {
+            return NoContent();
         }
     }
 }

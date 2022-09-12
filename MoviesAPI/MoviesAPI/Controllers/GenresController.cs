@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using MoviesAPI.Entities;
 using MoviesAPI.Services;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 namespace MoviesAPI.Controllers
 {
     [Route("api/genres")]
+    [ApiController]
     public class GenresController : ControllerBase
     {
         private readonly IRepository repository;
@@ -25,9 +27,13 @@ namespace MoviesAPI.Controllers
         }
 
         //[HttpGet("example")]
-        [HttpGet("{Id:int}/{param=john}")]
-        public ActionResult<Genre> Get(int Id, string param)
+        [HttpGet("{Id:int}")]
+        public ActionResult<Genre> Get(int Id, [BindNever] string param)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             var genre = repository.GetGenreById(Id);
             if (genre == null)
             {
@@ -39,19 +45,19 @@ namespace MoviesAPI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Post()
+        public ActionResult Post([FromBody] Genre genre)
         {
             return NoContent();
         }
 
         [HttpPut]
-        public ActionResult Put()
+        public ActionResult Put([FromBody] Genre genre)
         {
             return NoContent();
         }
 
         [HttpDelete]
-        public ActionResult Delete()
+        public ActionResult Delete([FromBody] Genre genre)
         {
             return NoContent();
         }

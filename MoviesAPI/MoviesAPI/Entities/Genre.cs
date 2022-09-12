@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using MoviesAPI.Validations;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MoviesAPI.Entities
 {
@@ -8,6 +10,7 @@ namespace MoviesAPI.Entities
 
         [Required(ErrorMessage = "The field with name {0} is require")]
         [StringLength(10)]
+        [FirstLetterUppercase]
         public string Name { get; set; }
 
         [Range(18, 120)]

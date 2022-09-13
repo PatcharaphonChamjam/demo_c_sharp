@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -29,6 +30,8 @@ namespace MoviesAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddResponseCaching(); //30.filter
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(); //30.filter
             services.AddSingleton<IRepository, InMemoryRepository>();
         }
 
@@ -70,6 +73,10 @@ namespace MoviesAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseResponseCaching(); //30.filter
+
+            app.UseAuthentication(); //30.filter
 
             app.UseAuthorization();
 

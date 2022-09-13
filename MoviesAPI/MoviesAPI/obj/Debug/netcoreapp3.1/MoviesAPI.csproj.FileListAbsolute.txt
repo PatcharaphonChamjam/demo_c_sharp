@@ -17,3 +17,12 @@ C:\Github\MoviesAPI\MoviesAPI\obj\Debug\netcoreapp3.1\MoviesAPI.RazorTargetAssem
 C:\Github\MoviesAPI\MoviesAPI\obj\Debug\netcoreapp3.1\MoviesAPI.dll
 C:\Github\MoviesAPI\MoviesAPI\obj\Debug\netcoreapp3.1\MoviesAPI.pdb
 C:\Github\MoviesAPI\MoviesAPI\obj\Debug\netcoreapp3.1\MoviesAPI.genruntimeconfig.cache
+C:\Github\MoviesAPI\MoviesAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Github\MoviesAPI\MoviesAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Github\MoviesAPI\MoviesAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Github\MoviesAPI\MoviesAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Github\MoviesAPI\MoviesAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Github\MoviesAPI\MoviesAPI\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Github\MoviesAPI\MoviesAPI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Github\MoviesAPI\MoviesAPI\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Github\MoviesAPI\MoviesAPI\obj\Debug\netcoreapp3.1\MoviesAPI.csproj.CopyComplete

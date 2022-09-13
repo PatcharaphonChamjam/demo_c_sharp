@@ -33,5 +33,6 @@ namespace MoviesAPI.Entities
                  }
              }
          }*/
+        public IEnumerable<string> Test = new string[] { };
     }
 }

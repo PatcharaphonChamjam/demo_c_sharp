@@ -20,6 +20,10 @@ namespace MoviesAPI
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    /*webBuilder.ConfigureLogging(ILoggingBuilder =>
+                    {
+                        ILoggingBuilder.AddProvider()
+                    });*/
                     webBuilder.UseStartup<Startup>();
                 });
     }

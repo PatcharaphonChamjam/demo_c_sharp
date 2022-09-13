@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.Extensions.Logging;
 using MoviesAPI.Entities;
 using MoviesAPI.Services;
 using System.Collections.Generic;
@@ -12,10 +13,12 @@ namespace MoviesAPI.Controllers
     public class GenresController : ControllerBase
     {
         private readonly IRepository repository;
+        private readonly ILogger<GenresController> logger;
 
-        public GenresController(IRepository repository)
+        public GenresController(IRepository repository, ILogger<GenresController> logger)
         {
             this.repository = repository;
+            this.logger = logger;
         }
 
         [HttpGet] //https://localhost:44305/allgenres
@@ -23,20 +26,20 @@ namespace MoviesAPI.Controllers
         [HttpGet("/allgenres")] //https://localhost:44305/allgenres
         public async Task<ActionResult<List<Genre>>> Get()
         {
+            logger.LogInformation("Getting all the genre");
             return await repository.GetAllGenre();
         }
 
         //[HttpGet("example")]
-        [HttpGet("{Id:int}")]
-        public ActionResult<Genre> Get(int Id, [BindNever] string param)
+        [HttpGet("{Id:int}", Name = "getGenre")]
+        public ActionResult<Genre> Get(int Id, string param)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            logger.LogDebug("get by Id method executing....");
             var genre = repository.GetGenreById(Id);
             if (genre == null)
             {
+                logger.LogWarning($"Genre with Id {Id} not found");
+                logger.LogError("this is an error");
                 return NotFound();
             }
             //return Ok(2);
@@ -48,7 +51,7 @@ namespace MoviesAPI.Controllers
         public ActionResult Post([FromBody] Genre genre)
         {
             repository.AddGenre(genre);
-            return NoContent();
+            return new CreatedAtRouteResult("getGenre", new { Id = genre.Id }, genre);
         }
 
         [HttpPut]

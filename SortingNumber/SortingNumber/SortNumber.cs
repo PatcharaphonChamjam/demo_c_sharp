@@ -18,6 +18,8 @@ namespace SortingNumber
         {
             //กำหนด int array
             int[] array = new int[Size];
+            //TODO รับเป็น string มาขั้นอะไรสักอย่าง อาจจะขุึ้นด้วย
+
             //กำหนดเงื่อนไขวนลูป i = 0 ;i < Size; i++ :: รับค่าจาก Keyboard ตามจำนวน Index
             for (int i = 0; i < Size; i++)
             {

@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using MoviesAPI.Filters;
 using MoviesAPI.Services;
 using System;
 using System.Collections.Generic;
@@ -29,10 +30,15 @@ namespace MoviesAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers(options =>
+            {
+                options.Filters.Add(typeof(MyExceptionFilter)); //31.Custom filters
+            }).AddXmlDataContractSerializerFormatters(); //32.Adding XML Support
             services.AddResponseCaching(); //30.filter
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(); //30.filter
             services.AddSingleton<IRepository, InMemoryRepository>();
+            services.AddTransient<MyActionFilter>(); //31.Custom filters
+            services.AddTransient<Microsoft.Extensions.Hosting.IHostedService, WriteToFileHostedService>(); //33.Recurring Background Tasks with IHostedService
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

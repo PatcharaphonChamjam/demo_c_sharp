@@ -4,7 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Logging;
 using MoviesAPI.Entities;
+using MoviesAPI.Filters;
 using MoviesAPI.Services;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -26,7 +28,8 @@ namespace MoviesAPI.Controllers
         [HttpGet] //https://localhost:44305/allgenres
         [HttpGet("list")] //https://localhost:44305/api/genres/list
         [HttpGet("/allgenres")] //https://localhost:44305/allgenres
-        [ResponseCache(Duration = 60)]
+        //[ResponseCache(Duration = 60)]
+        [ServiceFilter(typeof(MyActionFilter))] //31.Custom filters
         public async Task<ActionResult<List<Genre>>> Get()
         {
             logger.LogInformation("Getting all the genre");
@@ -35,6 +38,7 @@ namespace MoviesAPI.Controllers
 
         //[HttpGet("example")]
         [HttpGet("{Id:int}", Name = "getGenre")]
+        [ServiceFilter(typeof(MyActionFilter))] //31.Custom filters
         public ActionResult<Genre> Get(int Id, string param)
         {
             logger.LogDebug("get by Id method executing....");
@@ -43,6 +47,7 @@ namespace MoviesAPI.Controllers
             {
                 logger.LogWarning($"Genre with Id {Id} not found");
                 logger.LogError("this is an error");
+                //throw new ApplicationException(); //31.Custom filters
                 return NotFound();
             }
             //return Ok(2);

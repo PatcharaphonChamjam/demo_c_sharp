@@ -11,5 +11,9 @@ namespace MoviesAPI.Services
         Task<List<Genre>> GetAllGenre();
 
         Genre GetGenreById(int Id);
+
+        //Genre GetGenreById(int Id);
+
+        //Genre GetGenreById(int Id);
     }
 }

@@ -15,6 +15,7 @@ namespace MoviesAPI.Filters
         public override void OnException(ExceptionContext context)
         {
             logger.LogError(context.Exception, context.Exception.Message);
+
             base.OnException(context);
         }
     }

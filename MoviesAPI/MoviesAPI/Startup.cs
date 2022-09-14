@@ -62,14 +62,14 @@ namespace MoviesAPI
 
                     logger.LogInformation(responseBody);
                 }
-            });
+            }); //29. Middleware
             app.Map("/map1", (app) =>
             {
                 app.Run(async context =>
                 {
                     await context.Response.WriteAsync("I'm short-circuiting the pipeline");
                 });
-            });
+            }); //29. Middleware
 
             if (env.IsDevelopment())
             {

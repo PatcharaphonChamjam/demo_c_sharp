@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 
 namespace MoviesAPI.Filters
 {
-    public class MyActionFilter : IActionFilter
+    public class MyActionFilter : IActionFilter //31.Custom filters
     {
         private readonly ILogger<MyActionFilter> logger;
 

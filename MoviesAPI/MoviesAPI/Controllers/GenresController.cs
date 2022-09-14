@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using MoviesAPI.Entities;
 using MoviesAPI.Filters;
@@ -16,25 +17,26 @@ namespace MoviesAPI.Controllers
     [ApiController]
     public class GenresController : ControllerBase
     {
-        private readonly IRepository repository;
         private readonly ILogger<GenresController> logger;
+        private readonly ApplicationDbContext context;
 
-        public GenresController(IRepository repository, ILogger<GenresController> logger)
+        public GenresController(ILogger<GenresController> logger, ApplicationDbContext context)
         {
-            this.repository = repository;
             this.logger = logger;
+            this.context = context;
         }
 
         [HttpGet]
         public async Task<ActionResult<List<Genre>>> Get()
         {
-            return await repository.GetAllGenre();
+            return await context.Genres.AsNoTracking().ToListAsync();
         }
 
         [HttpGet("{Id:int}", Name = "getGenre")]
-        public ActionResult<Genre> Get(int Id, string param)
+        public async Task<ActionResult<Genre>> Get(int Id)
         {
-            var genre = repository.GetGenreById(Id);
+            //var genre = repository.GetGenreById(Id);
+            var genre = await context.Genres.FirstOrDefaultAsync(x => x.Id == Id);
             if (genre == null)
             {
                 return NotFound();
@@ -43,9 +45,10 @@ namespace MoviesAPI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Post([FromBody] Genre genre)
+        public async Task<ActionResult> Post([FromBody] Genre genre)
         {
-            repository.AddGenre(genre);
+            context.Add(genre);
+            await context.SaveChangesAsync();
             return new CreatedAtRouteResult("getGenre", new { Id = genre.Id }, genre);
         }
 

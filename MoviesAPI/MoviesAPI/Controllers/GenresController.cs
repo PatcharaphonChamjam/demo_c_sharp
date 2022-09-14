@@ -25,33 +25,20 @@ namespace MoviesAPI.Controllers
             this.logger = logger;
         }
 
-        [HttpGet] //https://localhost:44305/allgenres
-        [HttpGet("list")] //https://localhost:44305/api/genres/list
-        [HttpGet("/allgenres")] //https://localhost:44305/allgenres
-        //[ResponseCache(Duration = 60)]
-        [ServiceFilter(typeof(MyActionFilter))] //31.Custom filters
+        [HttpGet]
         public async Task<ActionResult<List<Genre>>> Get()
         {
-            logger.LogInformation("Getting all the genre");
             return await repository.GetAllGenre();
         }
 
-        //[HttpGet("example")]
         [HttpGet("{Id:int}", Name = "getGenre")]
-        [ServiceFilter(typeof(MyActionFilter))] //31.Custom filters
         public ActionResult<Genre> Get(int Id, string param)
         {
-            logger.LogDebug("get by Id method executing....");
             var genre = repository.GetGenreById(Id);
             if (genre == null)
             {
-                logger.LogWarning($"Genre with Id {Id} not found");
-                logger.LogError("this is an error");
-                //throw new ApplicationException(); //31.Custom filters
                 return NotFound();
             }
-            //return Ok(2);
-            //return Ok("Sam");
             return genre;
         }
 

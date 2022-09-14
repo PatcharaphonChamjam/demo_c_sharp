@@ -34,41 +34,12 @@ namespace MoviesAPI
             {
                 options.Filters.Add(typeof(MyExceptionFilter)); //31.Custom filters
             }).AddXmlDataContractSerializerFormatters(); //32.Adding XML Support
-            services.AddResponseCaching(); //30.filter
             services.AddSingleton<IRepository, InMemoryRepository>();
-            services.AddTransient<Microsoft.Extensions.Hosting.IHostedService, WriteToFileHostedService>(); //33.Recurring Background Tasks with IHostedService
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.Use(async (context, next) =>
-            {
-                using (var swapStream = new MemoryStream())
-                {
-                    var originResponseBody = context.Response.Body;
-                    context.Response.Body = swapStream;
-
-                    await next.Invoke();
-
-                    swapStream.Seek(0, SeekOrigin.Begin);
-                    string responseBody = new StreamReader(swapStream).ReadToEnd();
-                    swapStream.Seek(0, SeekOrigin.Begin);
-
-                    await swapStream.CopyToAsync(originResponseBody);
-                    context.Response.Body = originResponseBody;
-
-                    logger.LogInformation(responseBody);
-                }
-            }); //29. Middleware
-            app.Map("/map1", (app) =>
-            {
-                app.Run(async context =>
-                {
-                    await context.Response.WriteAsync("I'm short-circuiting the pipeline");
-                });
-            }); //29. Middleware
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -77,10 +48,6 @@ namespace MoviesAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
-            app.UseResponseCaching(); //30.filter
-
-            app.UseAuthentication(); //30.filter
 
             app.UseAuthorization();
 

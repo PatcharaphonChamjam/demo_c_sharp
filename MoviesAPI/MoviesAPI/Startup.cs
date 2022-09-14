@@ -35,9 +35,7 @@ namespace MoviesAPI
                 options.Filters.Add(typeof(MyExceptionFilter)); //31.Custom filters
             }).AddXmlDataContractSerializerFormatters(); //32.Adding XML Support
             services.AddResponseCaching(); //30.filter
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(); //30.filter
             services.AddSingleton<IRepository, InMemoryRepository>();
-            services.AddTransient<MyActionFilter>(); //31.Custom filters
             services.AddTransient<Microsoft.Extensions.Hosting.IHostedService, WriteToFileHostedService>(); //33.Recurring Background Tasks with IHostedService
         }
 

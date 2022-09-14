@@ -49,8 +49,8 @@ namespace MoviesAPI.Controllers
             return genresDTOs;
         }
 
-        [HttpGet("{Id:int}", Name = "getGenre")]
-        public async Task<ActionResult<GenreDTO>> Get(int Id)
+        [HttpGet("{Id}/ssss/{name}")]
+        public async Task<ActionResult<GenreDTO>> Get(int Id, string name)
         {
             //var genre = repository.GetGenreById(Id);
             var genre = await context.Genres.FirstOrDefaultAsync(x => x.Id == Id);
@@ -73,15 +73,27 @@ namespace MoviesAPI.Controllers
             return new CreatedAtRouteResult("getGenre", new { genreDTO.Id }, genreDTO);
         }
 
-        [HttpPut]
-        public ActionResult Put([FromBody] Genre genre)
+        [HttpPut("{id}")]
+        public async Task<ActionResult> Put(int id, [FromBody] GenreCreationDTO genreCreation)
         {
+            var genre = mapper.Map<Genre>(genreCreation);
+            genre.Id = id;
+            context.Entry(genre).State = EntityState.Modified;
+            await context.SaveChangesAsync();
+
             return NoContent();
         }
 
-        [HttpDelete]
-        public ActionResult Delete([FromBody] Genre genre)
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(int id)
         {
+            var exists = await context.Genres.AnyAsync(x => x.Id == id);
+            if (!exists)
+            {
+                return NotFound();
+            }
+            context.Remove(new Genre() { Id = id });
+            await context.SaveChangesAsync();
             return NoContent();
         }
     }

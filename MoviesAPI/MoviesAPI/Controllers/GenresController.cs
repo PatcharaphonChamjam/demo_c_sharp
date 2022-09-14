@@ -95,7 +95,6 @@ namespace MoviesAPI.Controllers
             context.Remove(new Genre() { Id = id });
             await context.SaveChangesAsync();
             return NoContent();
-            //
         }
     }
 }

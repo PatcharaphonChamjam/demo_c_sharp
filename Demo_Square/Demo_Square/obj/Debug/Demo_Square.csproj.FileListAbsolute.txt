@@ -1,8 +1,0 @@
-C:\Github\Demo_Square\Demo_Square\bin\Debug\Demo_Square.exe.config
-C:\Github\Demo_Square\Demo_Square\bin\Debug\Demo_Square.exe
-C:\Github\Demo_Square\Demo_Square\bin\Debug\Demo_Square.pdb
-C:\Github\Demo_Square\Demo_Square\obj\Debug\Demo_Square.csproj.AssemblyReference.cache
-C:\Github\Demo_Square\Demo_Square\obj\Debug\Demo_Square.csproj.SuggestedBindingRedirects.cache
-C:\Github\Demo_Square\Demo_Square\obj\Debug\Demo_Square.csproj.CoreCompileInputs.cache
-C:\Github\Demo_Square\Demo_Square\obj\Debug\Demo_Square.exe
-C:\Github\Demo_Square\Demo_Square\obj\Debug\Demo_Square.pdb

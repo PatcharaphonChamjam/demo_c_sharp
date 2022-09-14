@@ -1,8 +1,0 @@
-C:\Github\SortingNumber\SortingNumber\bin\Debug\SortingNumber.exe.config
-C:\Github\SortingNumber\SortingNumber\bin\Debug\SortingNumber.exe
-C:\Github\SortingNumber\SortingNumber\bin\Debug\SortingNumber.pdb
-C:\Github\SortingNumber\SortingNumber\obj\Debug\SortingNumber.csproj.AssemblyReference.cache
-C:\Github\SortingNumber\SortingNumber\obj\Debug\SortingNumber.csproj.SuggestedBindingRedirects.cache
-C:\Github\SortingNumber\SortingNumber\obj\Debug\SortingNumber.csproj.CoreCompileInputs.cache
-C:\Github\SortingNumber\SortingNumber\obj\Debug\SortingNumber.exe
-C:\Github\SortingNumber\SortingNumber\obj\Debug\SortingNumber.pdb

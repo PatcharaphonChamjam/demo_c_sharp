@@ -34,6 +34,8 @@ namespace MoviesAPI
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddAutoMapper(typeof(Startup)); //40.Data Tranfer Objects and AutoMapper
+
             services.AddControllers(options =>
             {
                 options.Filters.Add(typeof(MyExceptionFilter)); //31.Custom filters

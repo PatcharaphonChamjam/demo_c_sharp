@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using MoviesAPI.DTOs;
-using MoviesAPI.Entities;
+using MoviesAPI.Models;
 
 namespace MoviesAPI.Helpers
 {
@@ -8,9 +8,13 @@ namespace MoviesAPI.Helpers
     {
         public AutoMapperProfiles()
         {
-            CreateMap<Genre, GenreDTO>().ReverseMap();
+            CreateMap<Genres, GenreDTO>().ReverseMap();
 
-            CreateMap<GenreCreationDTO, Genre>();
+            CreateMap<GenreCreationDTO, Genres>();
+
+            CreateMap<Person, PersonDTO>().ReverseMap();
+
+            CreateMap<PersonCreationDTO, Person>();
         }
     }
 }

@@ -1,7 +1,4 @@
-﻿using MoviesAPI.Validations;
-using System.ComponentModel.DataAnnotations;
-
-namespace MoviesAPI.DTOs
+﻿namespace MoviesAPI.DTOs
 {
     public class GenreDTO
     {

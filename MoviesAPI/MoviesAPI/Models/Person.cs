@@ -20,7 +20,9 @@ namespace MoviesAPI.Models
 
         [ForeignKey(nameof(DepartmentId))]
         [InverseProperty("People")]
+
         public virtual Department Department { get; set; }
+
         [ForeignKey(nameof(GenderId))]
         [InverseProperty("People")]
         public virtual Gender Gender { get; set; }

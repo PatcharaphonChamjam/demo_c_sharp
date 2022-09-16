@@ -23,11 +23,21 @@ namespace MoviesAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<PersonDTO>>> Get()
+        public async Task<ActionResult<List<PersonFullDetailDTO>>> Get()
         {
-            var people = await context.Person.ToListAsync();
+            /*var people = await context.Person.ToListAsync();
+            return mapper.Map<List<PersonDTO>>(people);*/
 
-            return mapper.Map<List<PersonDTO>>(people);
+            var people = await context.Person.Include(p => p.Gender).Include(d => d.Department)
+                .Select(r => new
+                {
+                    Fullname = $"{r.FirstName} {r.LastName}",
+                    Gender = r.Gender.GenderDetail,
+                    Department = r.Department.DepartmentDetail
+                }).ToListAsync();
+            //var outp = people;
+            //var output = new List<PersonFullDetailDTO> { Fullname = people.Fullname, Gender = people.Gender, Department = people.Department };
+            return mapper.Map<List<PersonFullDetailDTO>>(people);
         }
 
         [HttpGet("{id}", Name = "getPerson")]
@@ -83,6 +93,40 @@ namespace MoviesAPI.Controllers
             await context.SaveChangesAsync();
             var peopleDTO = mapper.Map<PersonDTO>(people);
             return new CreatedAtRouteResult("getPerson", new { id = people.Id }, peopleDTO);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult> Put(int id, [FromBody] PersonCreationDTO personCreationDTO)
+        {
+            var people = mapper.Map<Person>(personCreationDTO);
+            people.Id = id;
+            context.Entry(people).State = EntityState.Modified;
+            await context.SaveChangesAsync();
+
+            return Ok();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            /*var exists = await context.Genres.AnyAsync(x => x.Id == id);
+            if (!exists)
+            {
+                return NotFound();
+            }
+            context.Remove(new Genres() { Id = id });
+            await context.SaveChangesAsync();
+            return NoContent();*/
+
+            var exists = await context.Person.AnyAsync(x => x.Id == id);
+            if (!exists)
+            {
+                return NotFound();
+            }
+            context.Remove(new Person() { Id = id });
+            await context.SaveChangesAsync();
+
+            return Ok();
         }
     }
 }

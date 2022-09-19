@@ -25,9 +25,6 @@ namespace MoviesAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<List<PersonFullDetailDTO>>> Get()
         {
-            /*var people = await context.Person.ToListAsync();
-            return mapper.Map<List<PersonDTO>>(people);*/
-
             var people = await context.Person.Include(p => p.Gender).Include(d => d.Department)
                 .Select(r => new
                 {
@@ -35,16 +32,15 @@ namespace MoviesAPI.Controllers
                     Gender = r.Gender.GenderDetail,
                     Department = r.Department.DepartmentDetail
                 }).ToListAsync();
-            //var outp = people;
-            //var output = new List<PersonFullDetailDTO> { Fullname = people.Fullname, Gender = people.Gender, Department = people.Department };
-            return mapper.Map<List<PersonFullDetailDTO>>(people);
+
+            return Ok(people);
         }
 
         [HttpGet("{id}", Name = "getPerson")]
         public async Task<ActionResult<PersonFullDetailDTO>> Get(int id)
         {
             //Lemda Expression Join
-            var query = await (context.Person.Where(p => p.Id == id)
+            /*var query = await (context.Person.Where(p => p.Id == id)
                         .Join(context.Gender,
                             person => person.GenderId,
                             gender => gender.GenderId,
@@ -59,7 +55,7 @@ namespace MoviesAPI.Controllers
                             FullName = $"{r.p.person.FirstName} {r.p.person.LastName}",
                             Gender = r.p.gender.GenderDetail,
                             Department = r.department.DepartmentDetail
-                        })).FirstOrDefaultAsync();
+                        })).FirstOrDefaultAsync();*/
 
             //Include ต้องใส่ Relationship ใน  Database แล้ว Reverse Enginere ให้ Model Update
             var database = await context.Person.Where(p => p.Id == id).Include(p => p.Gender).Include(d => d.Department)
@@ -71,18 +67,17 @@ namespace MoviesAPI.Controllers
                 }).FirstOrDefaultAsync();
 
             //Simple Join
-            var peopleJoin = await (from p in context.Person
+            /*var peopleJoin = await (from p in context.Person
                                     where p.Id == id
                                     join g in context.Gender
                                     on p.GenderId equals g.GenderId
                                     join d in context.Department
                                     on p.DepartmentId equals d.DepartmentId
 
-                                    select new { Fullname = $"{p.FirstName} {p.LastName}", Gender = g.GenderDetail, Department = d.DepartmentDetail }).FirstOrDefaultAsync();
+                                    select new { Fullname = $"{p.FirstName} {p.LastName}", Gender = g.GenderDetail, Department = d.DepartmentDetail }).FirstOrDefaultAsync();*/
 
-            //var output = new PersonFullDetailDTO() { Fullname = peopleJoin.Fullname, Gender = peopleJoin.Gender, Department = peopleJoin.Department };
-            var output2 = new PersonFullDetailDTO() { Fullname = database.FullName, Gender = database.Gender, Department = database.Department };
-            return output2;
+            var output = new PersonFullDetailDTO() { Fullname = database.FullName, Gender = database.Gender, Department = database.Department };
+            return output;
         }
 
         [HttpPost]
@@ -109,15 +104,6 @@ namespace MoviesAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
-            /*var exists = await context.Genres.AnyAsync(x => x.Id == id);
-            if (!exists)
-            {
-                return NotFound();
-            }
-            context.Remove(new Genres() { Id = id });
-            await context.SaveChangesAsync();
-            return NoContent();*/
-
             var exists = await context.Person.AnyAsync(x => x.Id == id);
             if (!exists)
             {

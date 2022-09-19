@@ -26,6 +26,13 @@ namespace MoviesAPI.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Movies>(entity =>
+            {
+                entity.Property(e => e.InTheaters)
+                    .IsUnicode(false)
+                    .IsFixedLength();
+            });
+
             modelBuilder.Entity<Person>(entity =>
             {
                 entity.HasOne(d => d.Department)

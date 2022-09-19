@@ -21,6 +21,7 @@ namespace MoviesAPI.Data
         public virtual DbSet<Department> Department { get; set; }
         public virtual DbSet<Gender> Gender { get; set; }
         public virtual DbSet<Genres> Genres { get; set; }
+        public virtual DbSet<Movies> Movies { get; set; }
         public virtual DbSet<Person> Person { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

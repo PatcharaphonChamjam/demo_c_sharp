@@ -26,6 +26,10 @@
          "ObjectType": 0
       },
       {
+         "Name": "[dbo].[Movies]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[Person]",
          "ObjectType": 0
       }

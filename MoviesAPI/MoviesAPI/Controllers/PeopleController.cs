@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Linq;
 using MoviesAPI.Services;
 using System.IO;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace MoviesAPI.Controllers
 {
@@ -133,6 +134,33 @@ namespace MoviesAPI.Controllers
             await context.SaveChangesAsync();
 
             return Ok();
+        }
+
+        [HttpPatch("{id}")]
+        public async Task<ActionResult> Patch(int id, [FromBody] JsonPatchDocument<PersonPatchDTO> patchDocument)
+        {
+            if (patchDocument == null)
+            {
+                return BadRequest();
+            }
+            var entityFromDB = await context.Person.FirstOrDefaultAsync(x => x.Id == id);
+            if (entityFromDB == null)
+            {
+                return NotFound();
+            }
+
+            var entityDTO = mapper.Map<PersonPatchDTO>(entityFromDB);
+            patchDocument.ApplyTo(entityDTO, ModelState);
+
+            var isValid = TryValidateModel(entityDTO);
+            if (!isValid)
+            {
+                return BadRequest(ModelState);
+            }
+            mapper.Map(entityDTO, entityFromDB);
+            await context.SaveChangesAsync();
+
+            return NoContent();
         }
     }
 }

@@ -32,7 +32,8 @@ namespace MoviesAPI
             services.AddControllers(options =>
             {
                 options.Filters.Add(typeof(MyExceptionFilter)); //31.Custom filters
-            }).AddXmlDataContractSerializerFormatters(); //32.Adding XML Support
+            }).AddNewtonsoftJson() //49.HTTP Patch and JSON Patch
+              .AddXmlDataContractSerializerFormatters(); //32.Adding XML Support
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

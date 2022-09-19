@@ -17,12 +17,11 @@ namespace MoviesAPI.Models
         public string FirstName { get; set; }
         [StringLength(50)]
         public string LastName { get; set; }
+        public string Picture { get; set; }
 
         [ForeignKey(nameof(DepartmentId))]
         [InverseProperty("People")]
-
         public virtual Department Department { get; set; }
-
         [ForeignKey(nameof(GenderId))]
         [InverseProperty("People")]
         public virtual Gender Gender { get; set; }

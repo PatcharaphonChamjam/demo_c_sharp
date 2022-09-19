@@ -6,6 +6,8 @@ using MoviesAPI.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq;
+using MoviesAPI.Services;
+using System.IO;
 
 namespace MoviesAPI.Controllers
 {
@@ -15,11 +17,16 @@ namespace MoviesAPI.Controllers
     {
         private readonly Data.ApplicationDbContext context;
         private readonly IMapper mapper;
+        private readonly IFileStorageService fileStorageService;
+        private readonly string containerName = "people";
 
-        public PeopleController(Data.ApplicationDbContext context, IMapper mapper)
+        public PeopleController(Data.ApplicationDbContext context
+            , IMapper mapper
+            , IFileStorageService fileStorageService)
         {
             this.context = context;
             this.mapper = mapper;
+            this.fileStorageService = fileStorageService;
         }
 
         [HttpGet]
@@ -81,9 +88,22 @@ namespace MoviesAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] PersonCreationDTO personCreationDTO)
+        public async Task<ActionResult> Post([FromForm] PersonCreationDTO personCreationDTO)
         {
             var people = mapper.Map<Person>(personCreationDTO);
+
+            if (personCreationDTO.Picture != null)
+            {
+                using (var memoryStream = new MemoryStream())
+                {
+                    await personCreationDTO.Picture.CopyToAsync(memoryStream);
+                    var content = memoryStream.ToArray();
+                    var extention = Path.GetExtension(personCreationDTO.Picture.FileName);
+                    people.Picture =
+                        await fileStorageService.SaveFile(content, extention,
+                        containerName, personCreationDTO.Picture.ContentType);
+                }
+            }
             context.Add(people);
             await context.SaveChangesAsync();
             var peopleDTO = mapper.Map<PersonDTO>(people);

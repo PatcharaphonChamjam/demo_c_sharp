@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MoviesAPI.Filters;
+using MoviesAPI.Services;
 
 namespace MoviesAPI
 {
@@ -25,6 +26,9 @@ namespace MoviesAPI
 
             services.AddAutoMapper(typeof(Startup)); //40.Data Tranfer Objects and AutoMapper
 
+            services.AddTransient<IFileStorageService, InAppStorageService>(); //47.Saving Files Locally
+            services.AddHttpContextAccessor(); //47.Saving Files Locally
+
             services.AddControllers(options =>
             {
                 options.Filters.Add(typeof(MyExceptionFilter)); //31.Custom filters
@@ -40,6 +44,8 @@ namespace MoviesAPI
             }
 
             app.UseHttpsRedirection();
+
+            app.UseStaticFiles(); //47.Saving Files Locally
 
             app.UseRouting();
 

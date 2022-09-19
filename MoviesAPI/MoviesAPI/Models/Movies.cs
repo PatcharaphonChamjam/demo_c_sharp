@@ -16,7 +16,8 @@ namespace MoviesAPI.Models
         public string Title { get; set; }
         [StringLength(50)]
         public string Summary { get; set; }
-        public bool? InTheaters { get; set; }
+        [StringLength(10)]
+        public string InTheaters { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime ReleaseDate { get; set; }
     }

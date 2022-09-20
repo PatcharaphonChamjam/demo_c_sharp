@@ -9,6 +9,11 @@ namespace MoviesAPI.Models
 {
     public partial class Person
     {
+        public Person()
+        {
+            Movies = new HashSet<Movies>();
+        }
+
         [Key]
         public int Id { get; set; }
         public int GenderId { get; set; }
@@ -25,5 +30,7 @@ namespace MoviesAPI.Models
         [ForeignKey(nameof(GenderId))]
         [InverseProperty("People")]
         public virtual Gender Gender { get; set; }
+        [InverseProperty("Person")]
+        public virtual ICollection<Movies> Movies { get; set; }
     }
 }

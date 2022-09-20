@@ -16,9 +16,19 @@ namespace MoviesAPI.Models
         public string Title { get; set; }
         [StringLength(50)]
         public string Summary { get; set; }
-        [StringLength(10)]
-        public string InTheaters { get; set; }
+        public bool InTheaters { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime ReleaseDate { get; set; }
+        public int PersonId { get; set; }
+        public int GenresId { get; set; }
+
+        [ForeignKey(nameof(GenresId))]
+        [InverseProperty("Movies")]
+        public virtual Genres Genres { get; set; }
+        [ForeignKey(nameof(PersonId))]
+        [InverseProperty("Movies")]
+        public virtual Person Person { get; set; }
+
+       
     }
 }

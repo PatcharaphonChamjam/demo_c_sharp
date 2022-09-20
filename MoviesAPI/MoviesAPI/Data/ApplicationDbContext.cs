@@ -28,9 +28,17 @@ namespace MoviesAPI.Data
         {
             modelBuilder.Entity<Movies>(entity =>
             {
-                entity.Property(e => e.InTheaters)
-                    .IsUnicode(false)
-                    .IsFixedLength();
+                entity.HasOne(d => d.Genres)
+                    .WithMany(p => p.Movies)
+                    .HasForeignKey(d => d.GenresId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Movies_Genres");
+
+                entity.HasOne(d => d.Person)
+                    .WithMany(p => p.Movies)
+                    .HasForeignKey(d => d.PersonId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Movies_Person");
             });
 
             modelBuilder.Entity<Person>(entity =>

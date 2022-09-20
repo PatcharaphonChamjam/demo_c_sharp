@@ -1,4 +1,5 @@
 ﻿using MoviesAPI.Validations;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace MoviesAPI.DTOs
@@ -9,5 +10,7 @@ namespace MoviesAPI.DTOs
         [StringLength(40)]
         [FirstLetterUppercase]
         public string Name { get; set; }
+
+        public int MovieId { get; set; }
     }
 }

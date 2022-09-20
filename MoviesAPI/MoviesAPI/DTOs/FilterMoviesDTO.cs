@@ -23,5 +23,8 @@ namespace MoviesAPI.DTOs
         public string Summary { get; set; }
         public DateTime ReleaseDate { get; set; }
         public int PersonId { get; set; }
+
+        public string OrderingField { get; set; } //55.Ordering
+        public bool AscendingOrder { get; set; } = true; //55.Ordering
     }
 }

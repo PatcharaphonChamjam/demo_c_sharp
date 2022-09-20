@@ -21,5 +21,7 @@ namespace MoviesAPI.Models
 
         [InverseProperty("Genres")]
         public virtual ICollection<Movies> Movies { get; set; }
+
+        //public Movies Movies { get; set; }
     }
 }

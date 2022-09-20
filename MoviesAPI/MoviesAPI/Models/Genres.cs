@@ -9,10 +9,17 @@ namespace MoviesAPI.Models
 {
     public partial class Genres
     {
+        public Genres()
+        {
+            Movies = new HashSet<Movies>();
+        }
+
         [Key]
         public int Id { get; set; }
-        [Required]
-        [StringLength(40)]
+        [StringLength(50)]
         public string Name { get; set; }
+
+        [InverseProperty("Genres")]
+        public virtual ICollection<Movies> Movies { get; set; }
     }
 }

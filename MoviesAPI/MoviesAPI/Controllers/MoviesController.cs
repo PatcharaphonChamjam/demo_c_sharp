@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Linq.Dynamic.Core;
 
 namespace MoviesAPI.Controllers
 {
@@ -62,7 +63,10 @@ namespace MoviesAPI.Controllers
             }
 
             //รับค่าจาก param in postman if InTheaters == True แสดงค่าที่ InTheaters เป็น True
-            moviesQueryable = moviesQueryable.Where(x => x.InTheaters == filterMoviesDTO.InTheaters);
+            if (filterMoviesDTO.InTheaters != null)
+            {
+                moviesQueryable = moviesQueryable.Where(x => x.InTheaters == filterMoviesDTO.InTheaters);
+            }
 
             if (filterMoviesDTO.UpcomingRelease)
             {
@@ -74,6 +78,12 @@ namespace MoviesAPI.Controllers
                 moviesQueryable = moviesQueryable
                     .Where(x => x.GenresId == filterMoviesDTO.GenresId);
             }
+            if (!string.IsNullOrWhiteSpace(filterMoviesDTO.OrderingField)) //55.Ordering
+            {
+                //moviesQueryable = moviesQueryable.OrderBy("title descending");
+                moviesQueryable = moviesQueryable
+                    .OrderBy($"{filterMoviesDTO.OrderingField} {(filterMoviesDTO.AscendingOrder ? "ascending" : "descending")}");
+            }
 
             await HttpContext.InsertPaginationParametersInResponse(moviesQueryable,
                 filterMoviesDTO.RecordPerPage);
@@ -83,15 +93,17 @@ namespace MoviesAPI.Controllers
             return mapper.Map<List<MoviesDTO>>(movies);
         }
 
-        [HttpGet("{id}", Name = "getMovie")]
-        public async Task<ActionResult<MoviesDTO>> Get(int id)
+        [HttpGet("{id}", Name = "getMovie")] //Related Order
+        public async Task<ActionResult<MoviesDetailsDTO>> Get(int id)
         {
-            var movie = await context.Movies.FirstOrDefaultAsync(x => x.Id == id);
+            var movie = await context.Movies
+                .Include(x => x.Genres)
+                .FirstOrDefaultAsync(x => x.Id == id);
             if (movie == null)
             {
                 return NotFound();
             }
-            return mapper.Map<MoviesDTO>(movie);
+            return mapper.Map<MoviesDetailsDTO>(movie);
         }
 
         [HttpPost]

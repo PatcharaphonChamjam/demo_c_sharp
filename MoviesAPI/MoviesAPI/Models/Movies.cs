@@ -25,10 +25,14 @@ namespace MoviesAPI.Models
         [ForeignKey(nameof(GenresId))]
         [InverseProperty("Movies")]
         public virtual Genres Genres { get; set; }
+        //public List<Genres> Genres { get; set; }
+
         [ForeignKey(nameof(PersonId))]
         [InverseProperty("Movies")]
         public virtual Person Person { get; set; }
 
-       
+
+
+
     }
 }

@@ -27,16 +27,16 @@ namespace MoviesAPI.Helpers
             CreateMap<MoviesCreationDTO, Movies>().ReverseMap();
 
             CreateMap<Movies, MoviesDetailsDTO>()
-                .ForMember(x => x.Genres, optios => optios.MapFrom(MapMoviesGenres));
+                .ForMember(x => x.Genres, optios => optios.MapFrom(src => src.Genres));
         }
 
         private List<GenreDTO> MapMoviesGenres(Movies movies, MoviesDetailsDTO moviesDetailsDTO)
         {
             var result = new List<GenreDTO>();
-            foreach (var moviegenre in movies.Genres)
+            /*foreach (var moviegenre in movies.Genres)
             {
                 result.Add(new GenreDTO() { Id = moviegenre.Id, Name = moviegenre.Name });
-            }
+            }*/
             return result;
         }
     }

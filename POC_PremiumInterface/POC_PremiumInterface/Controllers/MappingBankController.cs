@@ -27,11 +27,11 @@ namespace POC_PremiumInterface.Controllers
             return Ok(bank);
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<MappingBank>> Get(int id)
+        [HttpGet("{BankId}")]
+        public async Task<ActionResult<MappingBank>> Get(int BankId)
         {
-            var bank = _context.MappingBank.Where(x => x.BankId == id).FirstOrDefault();
-            if (bank == null) return Ok($"id {id} not found.");
+            var bank = _context.MappingBank.Where(x => x.BankId == BankId).FirstOrDefault();
+            if (bank == null) return Ok($"id {BankId} not found.");
             return Ok(bank);
         }
     }

@@ -26,11 +26,11 @@ namespace POC_PremiumInterface.Controllers
             return Ok(product);
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<MappingProductType>> Get(int id)
+        [HttpGet("{ProductTypeId}")]
+        public async Task<ActionResult<MappingProductType>> Get(int ProductTypeId)
         {
-            var product = await _context.MappingProductType.Where(x => x.ProductTypeId == id).FirstOrDefaultAsync();
-            if (product == null) return Ok($"id {id} not found.");
+            var product = await _context.MappingProductType.Where(x => x.ProductTypeId == ProductTypeId).FirstOrDefaultAsync();
+            if (product == null) return Ok($"id {ProductTypeId} not found.");
             return Ok(product);
         }
     }

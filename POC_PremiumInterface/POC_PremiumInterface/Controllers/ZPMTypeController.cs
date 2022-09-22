@@ -39,16 +39,13 @@ namespace POC_PremiumInterface.Controllers
             return Ok(zpmDTOs);
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<ZPMTypeResponseDto>> Get(int id)
+        [HttpGet("{ZPMTypeId}")]
+        public async Task<ActionResult<ZPMTypeResponseDto>> Get(int ZPMTypeId)
         {
-            var zpm = await _context.ZPMType.Where(x => x.ZPMTypeId == id).FirstOrDefaultAsync();
+            var zpm = await _context.ZPMType.Where(x => x.ZPMTypeId == ZPMTypeId).FirstOrDefaultAsync();
 
-            if (zpm == null) return Ok($"id {id} not found.");
-            //var zpmDTOs = new List<ZPMTypeResponseDto>();
-
+            if (zpm == null) return Ok($"id {ZPMTypeId} not found.");
             var zpmDTO = new ZPMTypeResponseDto();
-
             zpmDTO.ZPMTypeId = zpm.ZPMTypeId;
             zpmDTO.ZPMTypeCode = zpm.ZPMTypeCode;
             zpmDTO.ZPMTypeDetail = zpm.ZPMTypeDetail;

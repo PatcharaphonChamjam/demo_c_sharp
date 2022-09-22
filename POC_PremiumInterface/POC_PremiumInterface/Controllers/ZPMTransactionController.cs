@@ -20,13 +20,12 @@ namespace POC_PremiumInterface.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<ZPMTransactionResponseDto>>> Get([FromQuery] ZPMTransactionRequestDto requestDto)
+        public async Task<ActionResult<List<ZPMTransactionResponseDto>>> Get([FromQuery] int transactionStatusId)
         {
-            var zpm = await _context.ZPMTransaction.Where(x => x.TransactionStatusId == requestDto.TransactionStatusId).ToListAsync();
-            if (zpm == null) return Ok($"id {requestDto.TransactionStatusId} not found");
+            var zpm = await _context.ZPMTransaction.Where(x => x.TransactionStatusId == transactionStatusId).ToListAsync();
+            if (zpm == null) return Ok($"id {transactionStatusId} not found");
             var model = new ZPMTransactionResponseDto();
 
-            //if (requestDto.ErrorMessage != null && requestDto.ErrorMessage  != " ")
             return Ok(zpm);
         }
     }

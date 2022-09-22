@@ -21,6 +21,7 @@ namespace POC_PremiumInterface.Data
         public virtual DbSet<MappingBank> MappingBank { get; set; }
         public virtual DbSet<MappingBankAccount> MappingBankAccount { get; set; }
         public virtual DbSet<MappingProductType> MappingProductType { get; set; }
+        public virtual DbSet<Queue> Queue { get; set; }
         public virtual DbSet<QueueType> QueueType { get; set; }
         public virtual DbSet<ZPMTransaction> ZPMTransaction { get; set; }
         public virtual DbSet<ZPMType> ZPMType { get; set; }
@@ -51,6 +52,16 @@ namespace POC_PremiumInterface.Data
                 entity.Property(e => e.ProductTypeId).ValueGeneratedNever();
 
                 entity.Property(e => e.MappingCode).IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Queue>(entity =>
+            {
+                entity.Property(e => e.QueueId).ValueGeneratedNever();
+
+                entity.HasOne(d => d.QueueType)
+                    .WithMany(p => p.Queues)
+                    .HasForeignKey(d => d.QueueTypeId)
+                    .HasConstraintName("FK_Queue_QueueType");
             });
 
             modelBuilder.Entity<ZPMTransaction>(entity =>

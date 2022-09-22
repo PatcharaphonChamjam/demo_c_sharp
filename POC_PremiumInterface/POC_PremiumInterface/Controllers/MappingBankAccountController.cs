@@ -26,11 +26,12 @@ namespace POC_PremiumInterface.Controllers
             return Ok(bankac);
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<MappingBankAccount>> Get(int id)
+        //TODO ส่ง BankAccountNo หรือ BankId คะ
+        [HttpGet("{BankAccountNo}")]
+        public async Task<ActionResult<MappingBankAccount>> Get(string BankAccountNo)
         {
-            var bankac = await _context.MappingBankAccount.Where(x => x.BankId == id).FirstOrDefaultAsync();
-            if (bankac == null) return Ok($"id {id} not found.");
+            var bankac = await _context.MappingBankAccount.Where(x => x.BankAccountNo == BankAccountNo).FirstOrDefaultAsync();
+            if (bankac == null) return Ok($"id {BankAccountNo} not found.");
 
             return Ok(bankac);
         }

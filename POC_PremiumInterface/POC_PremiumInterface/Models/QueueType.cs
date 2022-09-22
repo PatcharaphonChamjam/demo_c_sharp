@@ -9,6 +9,11 @@ namespace POC_PremiumInterface.Models
 {
     public partial class QueueType
     {
+        public QueueType()
+        {
+            Queues = new HashSet<Queue>();
+        }
+
         [Key]
         public int QueueTypeId { get; set; }
         [StringLength(50)]
@@ -16,5 +21,8 @@ namespace POC_PremiumInterface.Models
         public bool? IsActive { get; set; }
         public DateTime? CreatedDate { get; set; }
         public int? CreatedByUserId { get; set; }
+
+        [InverseProperty(nameof(Queue.QueueType))]
+        public virtual ICollection<Queue> Queues { get; set; }
     }
 }

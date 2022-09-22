@@ -19,6 +19,14 @@
          "ObjectType": 0
       },
       {
+         "Name": "[dbo].[MappingBankAccount]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MappingProductType]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[QueueType]",
          "ObjectType": 0
       },

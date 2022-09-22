@@ -19,6 +19,8 @@ namespace POC_PremiumInterface.Data
         }
 
         public virtual DbSet<MappingBank> MappingBank { get; set; }
+        public virtual DbSet<MappingBankAccount> MappingBankAccount { get; set; }
+        public virtual DbSet<MappingProductType> MappingProductType { get; set; }
         public virtual DbSet<QueueType> QueueType { get; set; }
         public virtual DbSet<ZPMTransaction> ZPMTransaction { get; set; }
         public virtual DbSet<ZPMType> ZPMType { get; set; }
@@ -30,6 +32,23 @@ namespace POC_PremiumInterface.Data
                 entity.Property(e => e.BankId).ValueGeneratedNever();
 
                 entity.Property(e => e.BankShortName).IsUnicode(false);
+
+                entity.Property(e => e.MappingCode).IsUnicode(false);
+            });
+
+            modelBuilder.Entity<MappingBankAccount>(entity =>
+            {
+                entity.HasKey(e => e.BankAccountNo)
+                    .HasName("PK_MappingBank_1");
+
+                entity.Property(e => e.BankAccountNo).IsUnicode(false);
+
+                entity.Property(e => e.MappingCode).IsUnicode(false);
+            });
+
+            modelBuilder.Entity<MappingProductType>(entity =>
+            {
+                entity.Property(e => e.ProductTypeId).ValueGeneratedNever();
 
                 entity.Property(e => e.MappingCode).IsUnicode(false);
             });
